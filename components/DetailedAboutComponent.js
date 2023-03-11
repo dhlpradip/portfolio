@@ -19,7 +19,7 @@ const DetailedAboutComponent = () => {
             <div className="text-justify text-2xl max-w-6xl">
                 <p>Welp, where do I begin.</p>
                 <p>So, My name is Pradeep Dahal and I sometimes call myself Hacked. I originally come from the eastern hills of Nepal, currently looking for the purpose and meaning of life in this city of dreams, Kathmandu.</p>
-                <p>I'm a Computer Engineer currently exploring my way into web and mobile apps development and have about two years of on-field experience during which I've touched various areas of frontend web development in and around React. It included JavaScript, a little of TypeScript, React in both JS and TS, NextJS, Redux, Bootstrap, Tailwind and so on. Apart from the world of browsers, I sometimes tend to delve into the world of BlockChain and Crypto with akin interest on Data Science, Crypto and Blockchain stuff.</p>
+                <p>I'm a Computer Engineer currently exploring my way into web and mobile apps development and have about two years of on-field experience during which I've touched various areas of frontend web development in and around React. It included JavaScript, a little of TypeScript, React in both JS and TS, NextJS, Redux, Bootstrap, Tailwind and so on. Apart from the world of browsers, I sometimes tend to delve into the world of BlockChain and Crypto with akin interest on Data Science.</p>
                 <br/>
                 <p>Other than Javascript, Python, C and C++, </p>
                 <p>I can speak English,</p>
