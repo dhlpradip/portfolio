@@ -16,7 +16,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="container sticky top-0 max-w-6xl  mx-auto px-4 py-10 md:py-20">
+    <div className="container sticky bg-inherit top-0 max-w-6xl  mx-auto px-4 py-8 md:py-20" style={{backgroundColor: "#262626"}}>
       <div className="flex  md:flex-row justify-between items-center">
 
         <div className="space-x-8 hidden md:block">
@@ -28,7 +28,7 @@ export default function Navbar() {
                 : "text-gray-300 dark:text-gray-300 font-normal "
             }`}
           >
-            Home{" "}
+            {"<Hacked/>"}{" "}
           </Link>
           <Link
             href="/about"
@@ -93,34 +93,34 @@ export default function Navbar() {
             className="text-base font-normal text-gray-600 dark:text-gray-300"
 
            >
-            <AiOutlineInstagram className="h-6 w-6" />
+            <AiOutlineInstagram className="h-8 w-8" />
           </a>
           <a
             href="https://twitter.com/dhlpradip" target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiOutlineTwitter className="h-6 w-6" />
+            <AiOutlineTwitter className="h-8 w-8" />
 
           </a>
           <a
             href="https://linkedin.com/in/dhlpradip" target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiOutlineLinkedin className="h-6 w-6" />
+            <AiOutlineLinkedin className="h-8 w-8" />
           </a>
 
           <a
             href="https://github.com/dhlpradip" target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiOutlineGithub className="h-6 w-6" />
+            <AiOutlineGithub className="h-8 w-8" />
           </a>
 
           <a
             href="https://gitlab.com/dhlpradip" target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiFillGitlab className="h-6 w-6" />
+            <AiFillGitlab className="h-8 w-8" />
           </a>
           
          
