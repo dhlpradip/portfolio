@@ -5,42 +5,27 @@ import PText from "./PText";
 import { KEY_WEB_3 } from "@/constants/sec";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import { useForm, ValidationError } from "@formspree/react";
 
 /* eslint-disable react/no-unescaped-entities */
 const ContactForm = () => {
     const router = useRouter()
-    async function handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
+    const [state, handleSubmit] = useForm("xoqzldwk");
 
-        formData.append("access_key", KEY_WEB_3);
-
-        const object = Object.fromEntries(formData);
-        const json = JSON.stringify(object);
-
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json"
-            },
-            body: json
-        });
-        const result = await response.json();
-        if (result.success) {
-            Swal.fire(
-            {
-                title:'Thank you',
-                text:'I have received your message',
-                icon:'success',
-                showCancelButton:false,
-                confirmButtonColor: '#3085d6',
-            }).then((res)=>{
-                if(res.isConfirmed){
-                    router.push("/")
-                }
-            })
-        }
+    if (state.succeeded) {
+      return <p>Thanks for your submission!</p>;
+    //  Swal.fire(
+    //     {
+    //         title:'Thank you',
+    //         text:'I have received your message',
+    //         icon:'success',
+    //         showCancelButton:false,
+    //         confirmButtonColor: '#3085d6',
+    //     }).then((res)=>{
+    //         if(res.isConfirmed){
+    //             router.push("/")
+    //         }
+    // })
     }
     return ( 
         <section className="mx-20 px-20" style={{height: "81vh"}}>
@@ -75,16 +60,19 @@ const ContactForm = () => {
           <div>
               <label for="email" className="block mb-2 text-lg font-medium text-gray-300 dark:text-gray-300">Your email</label>
               <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@email.com" required />
+              <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
           <div>
               <label for="subject" className="block mb-2 text-lg font-medium text-gray-300 dark:text-gray-300">Subject</label>
               <input type="text" id="subject" className="block p-3 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let me know how I can help you" required />
+              <ValidationError prefix="Subject" field="subject" errors={state.errors} />
           </div>
           <div className="sm:col-span-2">
               <label for="message" className="block mb-2 text-lg font-medium text-gray-300 dark:text-gray-400">Your message</label>
               <textarea id="message" rows="6" className="block p-2.5 w-full text-lg text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+              <ValidationError prefix="Message" field="message" errors={state.errors} />
           </div>
-          <button type="submit" className="py-3 px-5 text-2xl border bg-gray-300 font-medium text-center text-gray-900 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+          <button type="submit" disabled={state.submitting} className="py-3 px-5 text-2xl border bg-gray-300 font-medium text-center text-gray-900 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
       </form>
       </div>
   </div>
