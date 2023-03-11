@@ -5,6 +5,9 @@ import ContainerBlock from '@/components/ContainerBlock'
 import AboutComponent from '@/components/aboutComponent'
 import Hero from '@/components/Hero'
 import { useRouter } from 'next/router'
+import ExperienceComponent from '@/components/ExperienceComponent'
+import ProjectsComponent from '@/components/ProjectsComponent'
+import ContactComponent from '@/components/ContactComponent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +20,9 @@ export default function Home() {
   >
     <Hero />
     <AboutComponent />
+    <ProjectsComponent home/>
+    <ExperienceComponent />
+    <ContactComponent />
   </ContainerBlock>
    
   )

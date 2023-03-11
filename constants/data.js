@@ -1,3 +1,9 @@
+import TechKunjaLogo from "../public/tech-kunja.jpeg"
+import ClamphookLogo from "../public/clamphook.png"
+import TraversunLogo from "../public/traversun.png"
+import Hacked from "../public/hacked.png"
+import GithubLogo from "../public/github.png"
+
 const userData = {
     githubUsername: "dhlpradip",
     name: "Pradeep Dahal",
@@ -26,90 +32,76 @@ const userData = {
   ],
     projects: [
       {
-        title: "Tailwind Master Kit",
-        link: "https://tailwindmasterkit.com",
-        imgUrl: "/tmk.jpg",
+        title: "Clamphook",
+        link: "https://clamphook.com",
+        desc: "A entrance preparation website based on Nepal",
+        imgUrl: ClamphookLogo,
       },
       {
-        title: "PlaceholderTech",
-        link: "https://placeholdertech.in",
-        imgUrl: "/placeholdertech.png",
+        title: "Traversun",
+        link: "https://traversun.com",
+        desc: "A website for travellers to book Hotels, Restaurants and Vehicles",
+        imgUrl: TraversunLogo,
       },
       {
         title: "Portfolio",
-        link: "https://manuarora.in",
-        imgUrl: "/portfolio.png",
+        link: "https://erpradeepdahal.com.np",
+        desc:'The place you currently are in',
+        imgUrl: Hacked,
       },
       {
-        title: "CovidRescue",
-        link: "https://covidrescue.co.in",
-        imgUrl: "/covidrescue.png",
+        title: "Nepali Character Recognition using Deep CNN",
+        link: "https://github.com/dhlpradip/Handwritten-Nepali-Character-Recognition-using-Deep-CNN",
+        desc: "A Computer Vision project me and my team completed as our final project of Engineering",
+        imgUrl: Hacked,
       },
       {
-        title: "Algochurn",
-        link: "https://algochurn.com",
-        imgUrl: "/algochurn.png",
+        title: "Attendance App for Tech Kunja",
+        link: "https://attendance.techkunja.com",
+        desc: "Employee attendance platform for tech kunja",
+        imgUrl: Hacked,
       },
       {
-        title: "Playground",
-        link: "https://play.placeholdertech.in",
-        imgUrl: "/playground.png",
+        title: "Product Invoicing System",
+        link: "https://github.com/dhlpradip/Simple-Product-Invoicing-System-using-ReactJS",
+        desc: "A simple inventory management and product invoicing system application I created during internship",
+        imgUrl: Hacked,
       },
       {
-        title: "Feedmeback",
-        link: "https://feedmeback.vercel.app",
-        imgUrl: "/feedmeback.png",
-      },
-      {
-        title: "Devmedium",
-        link: "https://devmedium.vercel.app",
-        imgUrl: "/devmedium.png",
+        title: "Simple Blog App",
+        link: "https://github.com/dhlpradip/Simple-ReactJS-Blog",
+        desc:"A simple blog app based on The Net Ninja's Youtube tutorial I created during internship",
+        imgUrl: Hacked,
       },
     ],
 
     experience: [
       {
+        title: "Software Engineer",
+        company: "Tech Kunja",
+        logo:TechKunjaLogo,
+        year: "Nov 2021 - Present",
+        companyLink: "https://techkunja.com",
+        desc: "Worked as the primary frontend developer for projects such as Hotel/Restaurant booking and vehicle management and dispatch system.",
+      },
+      {
         title: "Software Developer",
-        company: "mroads",
-        year: "2021",
-        companyLink: "https://mroads.com",
-        desc: "Contributed to our flagship product - Panna - which is an AI powered candidate interviewing product.",
+        company: "Clamphook",
+        logo:ClamphookLogo,
+        year: "May-Jul 2021",
+        companyLink: "https://clamphook.com",
+        desc: "Worked with a competent team on a entrance and competitive examination preparation site. Created UI elements according to FIGMA designs",
       },
       {
-        title: "Founder and Developer",
-        company: "TailwindMasterKit",
-        year: "2021",
-        companyLink: "https://tailwindmasterkit.com",
-        desc: "Developed a marketplace for tailwind web components (React, HTML and Angular) and templates.",
+        title: "Software Development Intern",
+        company: "Tech Kunja",
+        logo:TechKunjaLogo,
+        year: "Feb-May 2021",
+        companyLink: "https://techkunja.com",
+        desc: "Learned about frontend web and mobile development with ReactJS and React Native. Worked on projects such as personal blog, inventgory management, and an attendance system application.",
       },
-      {
-        title: "Founder and Developer",
-        company: "Algochurn",
-        year: "2021",
-        companyLink: "https://algochurn.com",
-        desc: "Your last moment revision friend right before a Tech coding interview. Practice problems and get hired at top Product based companies.",
-      },
-      {
-        title: "Internship",
-        company: "Intel Corporation",
-        year: "2019",
-        companyLink: "https://intel.com",
-        desc: "Developed pothole detection system with OpenCV and computer vision, detects potholes on roads and informs the driver.",
-      },
-      {
-        title: "Graduation",
-        company: "UPES, Dehradun.",
-        year: "2019",
-        companyLink: "https://upes.co.in",
-        desc: "Major in Computer Science and Engineering with a CGPA of 7.0. Nobody asks this but it's okay.",
-      },
-      {
-        title: "High School",
-        company: "Delhi Public School, Jaipur.",
-        year: "2015",
-        companyLink: "https://upes.co.in",
-        desc: "Subjects being PCM - I barely survived with 93.6% marks aggregate. Flex fridays, fellas.",
-      },
+      
+      
     ],
     
   };

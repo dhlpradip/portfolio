@@ -6,8 +6,8 @@ import AboutImage from  "../public/about-img.png"
 
 const AboutComponent = () => {
     return ( 
-    <div className="container text-center" style={{height:'85vh'}} id="about">
-        <p className="text-6xl font-bold mb-12">About Me  </p>
+    <div className="container text-center pt-20" style={{height:'85vh'}} id="about">
+        <p className="text-6xl font-bold my-12">About Me  </p>
         <div className="flex justify-between sm:justify-center gap-28 flex-wrap">
         <div className="max-h-4xl bg-blend-overlay ">
             <Image src={AboutImage} alt="About Img" width={200} height={50} className="rounded-lg" style={{maxHeight:'50rem'}}/>
