@@ -1,6 +1,6 @@
 const PText = ({children}) => {
     return ( 
-        <div className="flex justify-center" style={{height: '100vh'}}>
+        <div className="flex justify-center">
         <p className="text-2xl" style={{maxWidth:'500px'}}>
             {children}
         </p>

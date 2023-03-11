@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Button = ({
-    btnText = 'test', btnLink='/', outline=false
+    btnText = 'test', btnLink='/', outline=false, blank=false
 }) => {
     const style ={
         marginTop: '2rem',
@@ -16,7 +16,7 @@ const Button = ({
           }
     return ( 
         <>
-        <Link href={btnLink ? btnLink :'/'} style={style} className={outline ? "bg-transparent" : 'bg-gray:600'}>
+        <Link href={btnLink ? btnLink :'/'} style={style} className={outline ? "bg-transparent" : 'bg-gray:600'} target={blank && "_blank"}>
         {btnText}
       </Link>
         </>
