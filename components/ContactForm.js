@@ -11,7 +11,7 @@ import { useEffect } from "react";
 /* eslint-disable react/no-unescaped-entities */
 const ContactForm = () => {
     const router = useRouter()
-    const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM);
+    const [state, handleSubmit] = useForm('xoqzldwk');
 
     useEffect(()=>{
         if(state){
