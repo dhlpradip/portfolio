@@ -25,7 +25,7 @@ export default function Navbar() {
             className={`text-2xl  ${
               router.asPath === "/"
                 ? "text-gray-300 font-bold dark:text-gray-300"
-                : "text-gray-300 dark:text-gray-300 font-normal "
+                : "text-gray-400 dark:text-gray-300 font-normal "
             }`}
           >
             {"<Hacked/>"}{" "}

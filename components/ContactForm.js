@@ -65,18 +65,18 @@ const ContactForm = () => {
     }
 
     return ( 
-        <section className="" style={{height: "100vh"}}>
-        <div className="py-20 lg:py-16 px-4 mx-auto max-w-screen">
+        <section className="container" style={{height: "100vh"}}>
+        <div className="py-20 lg:py-16 mx-auto  max-w-screen">
       <h2 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-300 dark:text-white">Contact Me</h2>
       <PText className="my-8 lg:mb-16 text-3xl font-light text-center text-gray-400 dark:text-gray-400 sm:text-xl">Have Something to say? feel free. I'll try to get back asap</PText>
       {/* <div className="flex flex-row justify-between mx-48 gap-20 my-20"> */}
       <div className="grid grid-cols-1  lg:grid-cols-2 gap-20">
             <div className="mt-3">
                 <div className="w-full ">
-                <div className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5">
-                    <MdEmail className="h-10 w-10 mr-8" />
+                <a href="mailto:erpradeepdahal@gmail.com" className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5">
+                    {/* <MdEmail className="h-10 w-10 mr-8" /> */}
                     <p className="text-4xl font-semibold">erpradeepdahal@gmail.com</p>
-                </div>
+                </a>
                 </div>
 
                 <div className="w-full ">

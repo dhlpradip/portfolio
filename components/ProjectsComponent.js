@@ -23,10 +23,10 @@ const ProjectsComponent = ({home}) => {
         <div className={home ? "container text-center pt-24 pb-20 lg:py-20  " :"container text-center py-20  "}  id="about">
         <p className="text-6xl font-bold mt-12">Projects  </p>
         <p className="text-3xl font-semibold mt-3 mb-12">Shown below are some of the projects I've been part of</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects?.map((item, i)=>(
-            <a key={i} href={item.link} className="basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <img className="h-48 w-full rounded-xl" src={item.imgUrl.src} alt={item.title} />
+            <a key={i} href={item.link} target="_blank" className="h-96 basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-600  rounded-lg drop-shadow-xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <img className="h-64 w-full rounded-md border-none" src={item.imgUrl.src} alt={item.title} />
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.title}</h5>
             <p className="font-normal text-xl text-gray-700 dark:text-gray-400">{item.desc}</p>
         </a>
