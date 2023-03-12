@@ -18,6 +18,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
   return (
     <div>
       <Head>
+        <link rel="icon" type="image/png" href="../public/hacked.png" />
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
