@@ -7,7 +7,7 @@ import 'react-vertical-timeline-component/style.min.css';
 const ExperienceComponent = () => {
     const router = useRouter()
     return ( 
-        <div className="container text-center pt-20" style={{height:'100vh'}} id="about">
+        <div className="container text-center py-20" style={{height:'auto'}} id="about">
         <p className="text-6xl font-bold my-12">My Work Experiences  </p>
         <VerticalTimeline animate={true}>
             {userData.experience.map((item, i)=>(

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Button from "./Button";
@@ -11,9 +12,10 @@ const DetailedAboutComponent = () => {
     return ( 
         <div className="container text-center" style={{height: '100%'}}  id="about">
         <p className="text-6xl font-bold mb-12">About Me  </p>
-        <div className="flex justify-between sm:justify-center gap-28 flex-wrap">
-        <div className="max-h-4xl bg-blend-overlay " style={{maxHeight:'50rem'}}>
-            <Image src={AboutImage} alt="About Img" width={200} height={50} className="rounded-lg" />
+        {/* <div className="flex justify-between sm:justify-center gap-28 flex-wrap"> */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-h-4xl bg-blend-overlay " style={{maxHeight:'60rem'}}>
+            <img src={AboutImage.src} alt="About Img"  className="rounded-lg" />
             </div>
             <div>
             <div className="text-justify text-2xl max-w-6xl">
@@ -34,8 +36,8 @@ const DetailedAboutComponent = () => {
         </div>
         <div className="my-20">
         <p className="text-5xl font-bold mb-12">What do I know  </p>
-        <div className="flex justify-between">
-            <div className="max-w-2xl ml-48">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+            <div className="">
                 <p className="text-3xl font-semibold">Tech Stack</p>
                 <div className="flex flex-wrap justify-center">
                 {userData.techStack.map((item, i)=>(
@@ -45,7 +47,7 @@ const DetailedAboutComponent = () => {
                 ))}
                 </div>
             </div>
-            <div className="ml-64">
+            <div className="">
                 <p className="text-3xl font-semibold">Other Skills</p>
                 <div className="flex flex-wrap justify-center">
                 {userData.otherSkills.map((item, i)=>(
