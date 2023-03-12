@@ -64,11 +64,9 @@ const ContactForm = () => {
         }
     }
 
-
-
     return ( 
-        <section className="mx-20 px-20" style={{height: "85vh"}}>
-        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen">
+        <section className="" style={{height: "100vh"}}>
+        <div className="py-20 lg:py-16 px-4 mx-auto max-w-screen">
       <h2 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-300 dark:text-white">Contact Me</h2>
       <PText className="my-8 lg:mb-16 text-3xl font-light text-center text-gray-400 dark:text-gray-400 sm:text-xl">Have Something to say? feel free. I'll try to get back asap</PText>
       {/* <div className="flex flex-row justify-between mx-48 gap-20 my-20"> */}

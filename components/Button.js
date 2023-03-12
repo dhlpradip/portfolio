@@ -16,7 +16,7 @@ const Button = ({
           }
     return ( 
         <>
-        <Link href={btnLink ? btnLink :'/'} style={style} className={outline ? "bg-transparent" : 'bg-gray:600 animate-pulse'} target={blank && "_blank"}>
+        <Link href={btnLink ? btnLink :'/'} style={style} className={outline ? "bg-transparent" : 'bg-gray:600 animate-pulse'} target={blank ? "_blank" : "_self"}>
         {btnText}
       </Link>
         </>
