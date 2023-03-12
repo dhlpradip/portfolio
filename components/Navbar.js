@@ -115,31 +115,31 @@ export default function Navbar() {
       <div className="space-x-8 block md:hidden mt-4">
       <Link
           href="/"
-          className="text-xl font-semibold text-gray-600 dark:text-gray-600"
+          className={router.asPath === '/' ?  "text-xl font-semibold text-gray-300 dark:text-gray-300":"text-xl font-semibold text-gray-600 dark:text-gray-600"}
         >
           Home
         </Link>
         <Link
           href="/about"
-          className="text-xl font-semibold text-gray-600 dark:text-gray-600"
+          className={router.asPath === '/about' ?  "text-xl font-semibold text-gray-300 dark:text-gray-300":"text-xl font-semibold text-gray-600 dark:text-gray-600"}
         >
           About
         </Link>
         <Link
           href="/projects"
-          className="text-xl font-semibold text-gray-600 dark:text-gray-600"
+          className={router.asPath === '/projects' ?  "text-xl font-semibold text-gray-300 dark:text-gray-300":"text-xl font-semibold text-gray-600 dark:text-gray-600"}
         >
           Projects
         </Link>
         <Link
           href="/experience"
-          className="text-xl font-semibold text-gray-600 dark:text-gray-600"
+          className={router.asPath === '/experience' ?  "text-xl font-semibold text-gray-300 dark:text-gray-300":"text-xl font-semibold text-gray-600 dark:text-gray-600"}
         >
           Experience
         </Link>
         <Link
           href="/contact"
-          className="text-xl font-semibold text-gray-600 dark:text-gray-600"
+          className={router.asPath === '/contact' ?  "text-xl font-semibold text-gray-300 dark:text-gray-300":"text-xl font-semibold text-gray-600 dark:text-gray-600"}
         >
           Contact
         </Link>
