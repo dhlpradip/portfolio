@@ -11,7 +11,7 @@ const Hero = () => {
             <h1 className="font-semibold text-8xl mt-2 mb-20">Pradeep Dahal</h1>
             <div className="my-16">
             <PText>I am currently working as a front end Software Engineer at <a href="https://techkunja.com" className="font-semibold">Tech Kunja</a>. Welcome to my little nook filled with Passion, Positivity and Poetry</PText>
-            <div className="mt-16">
+            <div className="mt-16 hover:animate-pulse">
             <Button btnText="View My Resume"  outline
             btnLink="https://drive.google.com/file/d/14U7nQCSYyQd7tsuEWtrVHt9p5RGZVt95/view?usp=sharing" blank />
             </div>
