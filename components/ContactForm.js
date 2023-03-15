@@ -80,10 +80,10 @@ const ContactForm = () => {
                 </div>
 
                 <div className="w-full ">
-                <div className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5">
+                <a href="tel:+9779815927737" className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5">
                     <AiFillPhone className="h-10 w-10 mr-8" />
                     <p className="text-4xl font-semibold">+977 9815927737</p>
-                </div>
+                </a>
                 </div>
 
                 <div className="w-full ">
