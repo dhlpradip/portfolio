@@ -31,6 +31,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           href={`https://yourwebsite.com${router.asPath}`}
         />
         <meta name="google-site-verification" content="rr3sCjhb92dMLITE924tlK9biOnG3vxqIcLF91zc51A" />
+        <meta name="google-site-verification" content="bjOQmOeEJ5dRlYMIMKrX2Nfo5EiAzhY_qzCsLiBrFO8" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Pradeep Dahal" />
         <meta property="og:description" content={meta.description} />
