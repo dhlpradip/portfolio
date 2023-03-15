@@ -3,16 +3,17 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Hacked from "../public/hacked.png"
 // import Footer from "./Footer";
 
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
-
   const meta = {
     title: "Pradeep Dahal - Engineer ,Developer, Writer, Bibliophile",
     description: `Welcome to my little nook filled with passion, positivity and poetry.`,
-    image: "/avatar.png",
+    image:Hacked.src,
     type: "website",
+    // date: new Date(),
     ...customMeta,
   };
   return (
@@ -24,11 +25,11 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://yourwebsite.com${router.asPath}`}
+          content={`https://erpradeepdahal.com.np${router.asPath}`}
         />
         <link
           rel="canonical"
-          href={`https://yourwebsite.com${router.asPath}`}
+          href={`https://erpradeepdahal.com.np${router.asPath}`}
         />
         <meta name="google-site-verification" content="rr3sCjhb92dMLITE924tlK9biOnG3vxqIcLF91zc51A" />
         <meta name="google-site-verification" content="bjOQmOeEJ5dRlYMIMKrX2Nfo5EiAzhY_qzCsLiBrFO8" />
