@@ -16,9 +16,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="container sticky top-0 max-w-6xl  mx-auto px-4 py-8 md:py-20" style={{backgroundColor: "#262626", zIndex:'100000'}}>
+    <div className="container sticky top-0 max-w-6xl  mx-auto px-4 pt-8 pb-3 md:py-10 bg-gray-800 " style={{ zIndex:'100000'}}>
       <div className="flex  md:flex-row justify-between items-center">
-
         <div className="space-x-8 hidden md:block">
         <Link
             href="/"
