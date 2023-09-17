@@ -3,7 +3,7 @@ import {GiCoffeeCup} from "react-icons/gi"
 
 const Footer = () => {
     return ( 
-<footer className=" w-full p-4 bg-black rounded-lg shadow flex justify-between md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+<footer className=" w-full p-4 bg-gray-800 rounded-lg shadow-sm flex justify-between md:items-center md:justify-between md:p-6">
 <span className="text-xl text-gray-500 dark:text-gray-30 text-center">© <a href="https://erpradeepdahal.com.np/" className="">Hacked</a> {new Date().getFullYear()}
         </span>
     <ul className="flex flex-wrap gap-5 mr-5 items-center  text-xl text-gray-500 dark:text-gray-400 sm:mt-0">
