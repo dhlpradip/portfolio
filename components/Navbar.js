@@ -27,7 +27,7 @@ export default function Navbar() {
                 : "text-gray-400 dark:text-gray-300 font-normal "
             }`}
           >
-            {"<Hacked/>"}{" "}
+            {"<Pradeep/>"}{" "}
           </Link>
           <Link
             href="/about"
