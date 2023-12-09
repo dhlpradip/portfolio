@@ -5,10 +5,15 @@ import { KEY_WEB_3 } from "@/constants/sec";
 import { useEffect, useRef, useState } from "react";
 import Swal from "sweetalert2";
 import { useRouter } from "next/router";
+import { MdEmail } from "react-icons/md";
 
 /* eslint-disable react/no-unescaped-entities */
 const ContactForm = () => {
   const [sent, setSent] = useState(false);
+  const [focused, setFocused] = useState({
+    email: false,
+    phone: false,
+  });
   const router = useRouter();
   const emailRef = useRef();
 
@@ -81,25 +86,36 @@ const ContactForm = () => {
         {/* <div className="flex flex-row justify-between mx-48 gap-20 my-20"> */}
         <div className="grid grid-cols-1  lg:grid-cols-2 gap-20">
           <div className="mt-3">
-            <div className="w-full ">
+            <div
+              className="w-full "
+              onMouseEnter={() => setFocused({ email: true })}
+              onMouseLeave={() => setFocused({ email: false })}
+            >
               <a
                 href="mailto:erpradeepdahal@gmail.com"
                 className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5 hover:border-blue-300 hover:bg-slate-700"
               >
-                {/* <MdEmail className="h-10 w-10 mr-8" /> */}
-                <p className="text-4xl font-semibold">
-                  erpradeepdahal@gmail.com
+                {/* <MdEmail className="h-10 w-10 mr-8 sm:hidden sm:mr-0" /> */}
+                <p className="flex text-4xl font-semibold">
+                  {focused.email && <MdEmail className="h-10 w-10 mr-8" />}
+                  {focused.email ? "Email Me" : "erpradeepdahal@gmail.com"}
                 </p>
               </a>
             </div>
 
-            <div className="w-full ">
+            <div
+              className="w-full "
+              onMouseEnter={() => setFocused({ phone: true })}
+              onMouseLeave={() => setFocused({ phone: false })}
+            >
               <a
                 href="tel:+9779815927737"
-                className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5 hover:border-blue-300 hover:bg-slate-700"
+                className="flex bg-black rounded-lg max-w-auto px-5 py-5 my-5 hover:border-blue-300 hover:bg-slate-700 focus:bg-slate-700 active:bg-slate-700"
               >
                 <AiFillPhone className="h-10 w-10 mr-8" />
-                <p className="text-4xl font-semibold">+977 9862672724</p>
+                <p className="text-4xl font-semibold">
+                  {focused.phone ? "Call Me" : "+977 9862672724"}
+                </p>
               </a>
             </div>
 

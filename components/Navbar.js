@@ -9,6 +9,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineTwitter,
 } from "react-icons/ai";
+import { Tooltip } from "./Tooltip";
 
 export default function Navbar() {
   const router = useRouter();
@@ -80,30 +81,33 @@ export default function Navbar() {
             target={"_blank"}
             className="text-base font-normal"
           >
-            <AiOutlineInstagram
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-pink-400"
-              title="Find me on Instagram"
-            />
+            <Tooltip message={"Follow me on Instagram"} background="#ae337b">
+              <AiOutlineInstagram className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-pink-400" />
+            </Tooltip>
           </a>
           <a
             href="https://twitter.com/dhlpradip"
             target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiOutlineTwitter
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-blue-400"
-              title="Follow me on Twitter"
-            />
+            <Tooltip
+              message={"Follow me on Twitter (sorry brother Musk 😉)"}
+              background={"#1DA1F2"}
+            >
+              <AiOutlineTwitter className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-blue-400" />
+            </Tooltip>
           </a>
           <a
             href="https://linkedin.com/in/dhlpradip"
             target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiOutlineLinkedin
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-[#0E65C3]"
-              title="Connect on Linkedin"
-            />
+            <Tooltip
+              message={"Let's get connected on LinkedIn"}
+              background="#0071B1"
+            >
+              <AiOutlineLinkedin className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-[#0E65C3]" />
+            </Tooltip>
           </a>
 
           <a
@@ -111,10 +115,15 @@ export default function Navbar() {
             target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiOutlineGithub
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-neutral-950"
-              title="Find my work on Github"
-            />
+            <Tooltip
+              message={"View My Projects on Github? 😬"}
+              background="#0f172a"
+            >
+              <AiOutlineGithub
+                className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-neutral-950"
+                title="Find my work on Github"
+              />
+            </Tooltip>
           </a>
 
           <a
@@ -122,10 +131,15 @@ export default function Navbar() {
             target={"_blank"}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
           >
-            <AiFillGitlab
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-[#E2432A]"
-              title="Find my work on Gitlab"
-            />
+            <Tooltip
+              message={"View My Projects on Gitlab? 😱"}
+              background="#f97316"
+            >
+              <AiFillGitlab
+                className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-[#E2432A]"
+                title="Find my work on Gitlab"
+              />
+            </Tooltip>
           </a>
         </div>
       </div>
