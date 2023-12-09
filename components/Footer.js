@@ -13,7 +13,7 @@ import { Tooltip } from "./Tooltip";
 
 const Footer = () => {
   return (
-    <footer className=" w-full p-4 bg-gray-800 rounded-lg shadow-sm flex justify-between md:items-center md:justify-between md:p-6">
+    <footer className=" w-full  mx-auto px-4 p-4 bg-gray-800 rounded-lg shadow-sm flex justify-between md:items-center md:justify-between md:p-6">
       <span className="text-xl text-gray-500 dark:text-gray-30 text-center">
         ©{" "}
         <a

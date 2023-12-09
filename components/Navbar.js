@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link
             href="/"
             className={`text-2xl hover:text-4xl   ${
-              router.asPath === "/"
+              router.pathname === "/"
                 ? "text-red-300 font-bold text-4xl "
                 : "text-gray-400 dark:text-gray-300 font-normal hover:text-emerald-100"
             }`}
