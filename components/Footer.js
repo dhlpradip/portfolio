@@ -31,12 +31,8 @@ const Footer = () => {
           target={"_blank"}
           className="text-base font-normal"
         >
-          <Tooltip
-            message={"Follow me on Instagram"}
-            background="#ae337b"
-            isAtTop
-          >
-            <AiOutlineInstagram className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-pink-400" />
+          <Tooltip message={"Instagram"} background="#ae337b" isAtTop>
+            <AiOutlineInstagram className="h-8 w-8  hover:fill-pink-400" />
           </Tooltip>
         </a>
         <a
@@ -44,12 +40,8 @@ const Footer = () => {
           target={"_blank"}
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
-          <Tooltip
-            message={"Follow me on Twitter (sorry brother Musk 😉)"}
-            background={"#1DA1F2"}
-            isAtTop
-          >
-            <AiOutlineTwitter className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-blue-400" />
+          <Tooltip message={"Twitter"} background={"#1DA1F2"} isAtTop>
+            <AiOutlineTwitter className="h-8 w-8  hover:fill-blue-400" />
           </Tooltip>
         </a>
         <a
@@ -57,12 +49,8 @@ const Footer = () => {
           target={"_blank"}
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
-          <Tooltip
-            message={"Let's get connected on LinkedIn"}
-            isAtTop
-            background="#0071B1"
-          >
-            <AiOutlineLinkedin className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-[#0E65C3]" />
+          <Tooltip message={"LinkedIn"} background="#0071B1" isAtTop>
+            <AiOutlineLinkedin className="h-8 w-8  hover:fill-[#0E65C3]" />
           </Tooltip>
         </a>
 
@@ -71,13 +59,9 @@ const Footer = () => {
           target={"_blank"}
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
-          <Tooltip
-            message={"View My Projects on Github? 😬"}
-            isAtTop
-            background="#0f172a"
-          >
+          <Tooltip message={"Github"} background="#0f172a" isAtTop>
             <AiOutlineGithub
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-neutral-950"
+              className="h-8 w-8  hover:fill-neutral-950"
               title="Find my work on Github"
             />
           </Tooltip>
@@ -88,13 +72,9 @@ const Footer = () => {
           target={"_blank"}
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
-          <Tooltip
-            message={"View My Projects on Gitlab? 😱"}
-            isAtTop
-            background="#f97316"
-          >
+          <Tooltip message={"Gitlab"} background="#f97316" isAtTop>
             <AiFillGitlab
-              className="h-8 w-8 hover:h-12 hover:w-12 hover:fill-[#E2432A]"
+              className="h-8 w-8  hover:fill-[#E2432A]"
               title="Find my work on Gitlab"
             />
           </Tooltip>

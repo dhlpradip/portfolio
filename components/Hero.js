@@ -27,7 +27,7 @@ const Hero = () => {
           <div className="mt-16 ">
             <Link
               href="https://drive.google.com/file/d/1hZPvPEkjdV0MuLVNkvDwW1xU2VKPfF1h/view?usp=sharing"
-              className="mt-10 px-8 py-5 text-3xl border rounded-2xl hover:border-blue-400 hover:text-5xl hover:px-16 hover:py-12 hover:text-red-300 animate-pulse"
+              className="mt-10 px-8 py-5 text-3xl border rounded-2xl hover:border-blue-400  hover:text-red-300 animate-pulse"
               target="_blank"
             >
               View My Resume
@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
         </div>
         <Link className="flex justify-center mt-48" href="#about">
-          <HiChevronDoubleDown className="animate-bounce hover:fill-red-300 h-24 w-24 hover:h-48 hover:w-48" />
+          <HiChevronDoubleDown className="animate-bounce hover:fill-red-300 h-24 w-24" />
         </Link>
       </div>
     </div>

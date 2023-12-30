@@ -15,11 +15,11 @@ const ContactComponent = () => {
           Want to hire me? or have you got something to tell me? Click the
           button below
         </PText>
-        <div className="my-10 hover:my-12">
+        <div className="my-10 ">
           {/* <Button btnLink="/contact" btnText="Contact Now" /> */}
           <Link
             href="/contact"
-            className="px-8 hover:px-10 py-5 hover:py-6 text-4xl hover:text-5xl bg-gray-600 hover:bg-blue-100 border rounded-xl hover:border-blue-400  hover:text-orange-600 hover:animate-none animate-pulse "
+            className="px-8 py-5  text-4xl  bg-gray-600 hover:bg-blue-100 border rounded-xl hover:border-blue-400  hover:text-orange-600 hover:animate-none animate-pulse "
           >
             Contact Now
           </Link>

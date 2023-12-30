@@ -69,7 +69,7 @@ const DetailedAboutComponent = () => {
             <div className="flex flex-wrap justify-center">
               {userData.techStack.map((item, i) => (
                 <div key={i}>
-                  <p className="border border-gray-600 p-2 m-2 text-xl hover:border-blue-300 hover:text-2xl hover:text-red-300 hover:p-4 ">
+                  <p className="border border-gray-600 p-2 m-2 text-xl hover:border-blue-300 hover:text-red-300 ">
                     {item}
                   </p>
                 </div>
@@ -81,7 +81,7 @@ const DetailedAboutComponent = () => {
             <div className="flex flex-wrap justify-center">
               {userData.otherSkills.map((item, i) => (
                 <div key={i}>
-                  <p className="border border-gray-600 p-2 m-2 text-xl hover:border-blue-300 hover:text-2xl hover:text-red-300">
+                  <p className="border border-gray-600 p-2 m-2 text-xl hover:border-blue-300  hover:text-red-300">
                     {item}
                   </p>
                 </div>

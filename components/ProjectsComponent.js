@@ -39,7 +39,7 @@ const ProjectsComponent = ({ home }) => {
             key={i}
             href={item.link}
             target="_blank"
-            className="h-88 hover:h-96 basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-600  rounded-lg drop-shadow-xl hover:drop-shadow-2xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            className="h-88 basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-600  rounded-lg drop-shadow-xl hover:drop-shadow-2xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <img
               className="h-64 w-full rounded-md border-none"
@@ -56,11 +56,11 @@ const ProjectsComponent = ({ home }) => {
         ))}
       </div>
       {home && (
-        <div className="my-12 hover:my-16">
+        <div className="my-12">
           {/* <Button btnLink="/projects" btnText="Show Me More" outline /> */}
           <Link
             href="/projects"
-            className="px-8 py-5 text-4xl hover:mt-16 hover:text-5xl hover:px-10 hover:py-8 bg-slate-600 hover:bg-slate-900 border rounded-xl hover:border-blue-400  hover:text-red-300  "
+            className="px-8 py-5 text-4xl bg-slate-600 hover:bg-slate-900 border rounded-xl hover:border-blue-400  hover:text-red-300  "
           >
             Show Me More
           </Link>
