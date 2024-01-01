@@ -3,6 +3,7 @@ import ClamphookLogo from "../public/clamphook.png";
 import TraversunLogo from "../public/traversun.png";
 import Hacked from "../public/hacked.png";
 import GithubLogo from "../public/github.png";
+import RioLogo from "../public/rio.png";
 
 const userData = {
   githubUsername: "dhlpradip",
@@ -51,6 +52,12 @@ const userData = {
     },
   ],
   projects: [
+    {
+      title: "RIO",
+      link: "https://riotech.sg",
+      desc: "A Singapore-based vehicle dispatch system with an ambition to launch worldwide",
+      imgUrl: RioLogo,
+    },
     {
       title: "Clamphook",
       link: "https://clamphook.com",
