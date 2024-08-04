@@ -4,6 +4,9 @@ import TraversunLogo from "../public/traversun.png";
 import Hacked from "../public/hacked.png";
 import GithubLogo from "../public/github.png";
 import RioLogo from "../public/rio.png";
+import euvinLogo from "../public/euvin-logo.png";
+import npsLogo from "../public/npsLogo.png";
+import yoAppLogo from "../public/yoAppLogo.svg";
 
 const userData = {
   githubUsername: "dhlpradip",
@@ -16,12 +19,15 @@ const userData = {
     "HTML5",
     "CSS3",
     "JavaScript",
+    "Typescript",
     "React",
     "NextJS",
     "React Native",
     "Redux",
     "TailwindCSS",
     "Bootstrap",
+    "Styled Components",
+    "SASS/SCSS",
     "C",
     "C++",
     "Python",
@@ -52,6 +58,26 @@ const userData = {
     },
   ],
   projects: [
+    {
+      title: "Yo App",
+      link: "https://yoapp.com.np",
+      desc: "A Nepal based Payment System Provider (Digital Wallet)",
+      imgUrl: yoAppLogo,
+    },
+    {
+      title: "Nepal Payment",
+      link: "https://nepalpayment.com",
+      desc: "A Nepal based Payment System Operator (Gateway)",
+      imgUrl: npsLogo,
+    },
+
+    {
+      title: "Euvin.ro",
+      link: "https://euvin.ro",
+      desc: "A Romania based invitation generator web app",
+      imgUrl: euvinLogo,
+    },
+
     {
       title: "RIO",
       link: "https://riotech.sg",
@@ -104,10 +130,24 @@ const userData = {
 
   experience: [
     {
+      title: "Software Developer",
+      company: "Nepal Payment Solution",
+      logo: npsLogo,
+      year: "June 2024 - Present",
+      companyLink: "https://nepalpayment.com",
+      desc: "Worked as the primary frontend developer for a leading payment system provider in Nepal",
+    },
+    {
+      title: "Frontend Developer",
+      company: "Freelance",
+      logo: Hacked,
+      year: "April 2024 - Present",
+    },
+    {
       title: "Software Engineer",
       company: "Tech Kunja",
       logo: TechKunjaLogo,
-      year: "Nov 2021 - Present",
+      year: "Nov 2021 - May 2024",
       companyLink: "https://techkunja.com",
       desc: "Worked as the primary frontend developer for projects such as Hotel/Restaurant booking and vehicle management and dispatch system.",
     },
