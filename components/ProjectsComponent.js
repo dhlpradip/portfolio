@@ -12,7 +12,7 @@ const ProjectsComponent = ({ home }) => {
     if (userData) {
       if (userData.projects) {
         if (home) {
-          setProjects(userData.projects?.slice(0, 3));
+          setProjects(userData.projects?.slice(0, 6));
         } else {
           setProjects(userData.projects);
         }
@@ -39,7 +39,7 @@ const ProjectsComponent = ({ home }) => {
             key={i}
             href={item.link}
             target="_blank"
-            className="h-88 basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-600  rounded-lg drop-shadow-xl hover:drop-shadow-2xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+            className="h-88 p-10 basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-600  rounded-lg drop-shadow-xl hover:drop-shadow-2xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
             <img
               className="h-64 w-full rounded-md border-none"

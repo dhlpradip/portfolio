@@ -67,7 +67,7 @@ const userData = {
     {
       title: "Nepal Payment",
       link: "https://nepalpayment.com",
-      desc: "A Nepal based Payment System Operator (Gateway)",
+      desc: "A Nepal based Payment System Operator (Payment Gateway)",
       imgUrl: npsLogo,
     },
 
