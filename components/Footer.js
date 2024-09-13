@@ -10,6 +10,8 @@ import {
 } from "react-icons/ai";
 import { GiCoffeeCup } from "react-icons/gi";
 import { Tooltip } from "./Tooltip";
+import Button from "./Button";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -23,6 +25,13 @@ const Footer = () => {
           Pradeep Dahal
         </a>{" "}
         {new Date().getFullYear()}
+        {"  "}
+        <Link
+          href="https://mind.erpradeepdahal.com.np/"
+          className="hover:text-red-300 hover:rotate-6  hover:scale-75 translate-x-4 skew-y-3"
+        >
+          - Mind
+        </Link>
       </span>
 
       <div className="space-x-4 flex flex-row items-center">

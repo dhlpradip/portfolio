@@ -3,6 +3,7 @@ import userData from "@/constants/data";
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import Link from "next/link";
+import Image from "next/image";
 
 /* eslint-disable react/no-unescaped-entities */
 const ProjectsComponent = ({ home }) => {
@@ -41,9 +42,9 @@ const ProjectsComponent = ({ home }) => {
             target="_blank"
             className="h-88 p-10 basis-1/3 block max-w-full pb-6 bg-gray-300 border border-gray-600  rounded-lg drop-shadow-xl hover:drop-shadow-2xl hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
           >
-            <img
+            <Image
               className="h-64 w-full rounded-md border-none"
-              src={item.imgUrl.src}
+              src={item.imgUrl}
               alt={item.title}
             />
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

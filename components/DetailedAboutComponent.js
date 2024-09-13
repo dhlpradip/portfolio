@@ -10,6 +10,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { MdSchool } from "react-icons/md";
+import Link from "next/link";
 
 const DetailedAboutComponent = () => {
   return (

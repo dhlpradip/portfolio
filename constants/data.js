@@ -7,6 +7,7 @@ import RioLogo from "../public/rio.png";
 import euvinLogo from "../public/euvin-logo.png";
 import npsLogo from "../public/npsLogo.png";
 import yoAppLogo from "../public/yoAppLogo.svg";
+import mind from "../public/mind.png";
 
 const userData = {
   githubUsername: "dhlpradip",
@@ -58,6 +59,12 @@ const userData = {
     },
   ],
   projects: [
+    {
+      title: "Mind",
+      link: "https://mind.erpradeepdahal.com.np",
+      desc: "A look into my mind",
+      imgUrl: mind,
+    },
     {
       title: "Yo App",
       link: "https://yoapp.com.np",
