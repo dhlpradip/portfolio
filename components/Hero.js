@@ -18,8 +18,9 @@ const Hero = () => {
         <div className="my-16">
           <PText>
             I am a seasoned front end Software Engineer with more than four
-            years of professional experience from 🇳🇵. Welcome to my little nook
-            filled with Passion, Positivity and Poetry
+            years of professional experience from 🇳🇵
+            <br />
+            Welcome to my little nook filled with Passion, Positivity and Poetry
           </PText>
           <div className="mt-16 ">
             <Link
