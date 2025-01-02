@@ -8,6 +8,7 @@ import euvinLogo from "../public/euvin-logo.png";
 import npsLogo from "../public/npsLogo.png";
 import yoAppLogo from "../public/yoAppLogo.svg";
 import mind from "../public/mind.png";
+import variconLogo from "../public/varicon-logo-1.png";
 
 const userData = {
   githubUsername: "dhlpradip",
@@ -137,10 +138,17 @@ const userData = {
 
   experience: [
     {
+      title: "Mid Level Frontend Developer",
+      company: "Varicon",
+      logo: variconLogo,
+      year: "Jan 2025 - Present",
+      companyLink: "https://varicon.com.au",
+    },
+    {
       title: "Software Developer",
       company: "Nepal Payment Solution",
       logo: npsLogo,
-      year: "June 2024 - Present",
+      year: "June 2024 - Jan 2025",
       companyLink: "https://nepalpayment.com",
       desc: "Worked as the primary frontend developer for a leading payment system provider in Nepal",
     },

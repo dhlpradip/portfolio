@@ -17,16 +17,13 @@ const Hero = () => {
         </h1>
         <div className="my-16">
           <PText>
-            I am a seasoned front end Software Engineer with more than three
-            years of professional experience.{" "}
-            {/* <a href="https://techkunja.com" className="font-semibold">
-              Tech Kunja
-            </a> */}
-            Welcome to my little nook filled with Passion, Positivity and Poetry
+            I am a seasoned front end Software Engineer with more than four
+            years of professional experience from 🇳🇵. Welcome to my little nook
+            filled with Passion, Positivity and Poetry
           </PText>
           <div className="mt-16 ">
             <Link
-              href="https://drive.google.com/file/d/1hZPvPEkjdV0MuLVNkvDwW1xU2VKPfF1h/view?usp=sharing"
+              href="https://drive.google.com/file/d/1wvk-SnNaG0SPD2Uq0Jmx5WdWy7INKZeC/view?usp=sharing"
               className="mt-10 px-8 py-5 text-3xl border rounded-2xl hover:border-blue-400  hover:text-red-300 animate-pulse"
               target="_blank"
             >
