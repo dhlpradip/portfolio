@@ -60,6 +60,12 @@ const userData = {
     },
   ],
   projects: [
+        {
+      title: "Varicon",
+      link: "https://varicon.com.au",
+      desc: "An Australian Civil Engineering Cost Management Solution",
+      imgUrl: variconLogo,
+    },
     {
       title: "Mind",
       link: "https://mind.erpradeepdahal.com.np",
