@@ -1,38 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pradeep Dahal — Portfolio
+
+Personal portfolio site built with the **Source & Verse** design system: a developer-poet identity with dual typography (JetBrains Mono + Fraunces), line-number gutter, and dark/light themes.
+
+## Stack
+
+- **Next.js 15** (App Router)
+- **React 19** + **TypeScript** (strict)
+- **Tailwind CSS v4** + shadcn/ui (new-york)
+- **Framer Motion** (scroll reveals)
+- **next-themes** (dark/light)
+- **Sonner** (toasts)
+- **@vercel/analytics**
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Serve production build |
+| `npm run lint` | ESLint |
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Add to `.env.local`:
 
-## Learn More
+```env
+WEB3FORMS_KEY=your_web3forms_access_key
 
-To learn more about Next.js, take a look at the following resources:
+# Writings section — hidden from nav/search until you set true
+NEXT_PUBLIC_WRITINGS_PUBLIC=false
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Firebase keys are already present for future backend integration. Contact form submissions go through `app/api/contact/route.ts` — writings will use `lib/writings.ts` and `app/api/writings/route.ts` as the Firestore seam.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/                  # App Router pages + API routes
+components/site/      # Portfolio sections (hero, about, projects, etc.)
+components/ui/        # shadcn/ui primitives
+lib/data.ts           # All site content (typed)
+lib/types.ts          # TypeScript types
+lib/writings.ts       # Writings content + Firestore seam
+lib/features.ts       # Feature flags (writings visibility)
+public/               # Static assets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| Path | Content |
+|------|---------|
+| `/` | Home — hero, about preview, 6 projects, experience, contact CTA |
+| `/about` | Full bio, skills, education |
+| `/projects` | All 13 projects |
+| `/experience` | Work timeline |
+| `/contact` | Contact form + details |
+| `/writings` | Poems & essays (unlisted until `NEXT_PUBLIC_WRITINGS_PUBLIC=true`) |
+| `/writings/[slug]` | Individual piece |
+
+## Branching
+
+- `main` — original Pages Router site (preserved)
+- `redesign` — TypeScript + App Router rebuild
+
+## Deploy
+
+Deploy on [Vercel](https://vercel.com) with `WEB3FORMS_KEY` set in project environment variables.
