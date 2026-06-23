@@ -11,6 +11,8 @@ import mind from "../public/mind.png";
 import variconLogo from "../public/varicon-logo-1.png";
 
 const userData = {
+  resumeUrl:
+    "https://drive.google.com/file/d/10a5E7a1seJW99IYRp7CTKfAYRe9r9DS6/view?usp=sharing",
   githubUsername: "dhlpradip",
   name: "Pradeep Dahal",
   avatarUrl: "/avatar.png",
@@ -60,7 +62,7 @@ const userData = {
     },
   ],
   projects: [
-        {
+    {
       title: "Varicon",
       link: "https://varicon.com.au",
       desc: "An Australian Civil Engineering Cost Management Solution",

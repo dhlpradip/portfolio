@@ -2,6 +2,7 @@ import PText from "./PText";
 import { HiChevronDoubleDown } from "react-icons/hi2";
 import Button from "./Button";
 import Link from "next/link";
+import userData from "@/constants/data";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
           </PText>
           <div className="mt-16 ">
             <Link
-              href="https://drive.google.com/file/d/1wvk-SnNaG0SPD2Uq0Jmx5WdWy7INKZeC/view?usp=sharing"
+              href={userData.resumeUrl}
               className="mt-10 px-8 py-5 text-3xl border rounded-2xl hover:border-blue-400  hover:text-red-300 animate-pulse"
               target="_blank"
             >
