@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
-  <rect width="640" height="400" fill="#f7f7f7"/>
-  <rect x="90" y="70" width="380" height="180" fill="#ff006e" transform="rotate(-2 280 160)"/>
-  <rect x="105" y="85" width="380" height="180" fill="#fbff00" stroke="#000" stroke-width="6" transform="rotate(1 295 175)"/>
-  <text x="295" y="185" text-anchor="middle" font-family="Courier New, monospace" font-size="72" font-weight="bold" letter-spacing="8" fill="#000" transform="rotate(1 295 175)">MIND</text>
-  <rect x="420" y="220" width="150" height="60" fill="#3a86ff" stroke="#000" stroke-width="5" transform="rotate(-3 495 250)"/>
-  <text x="495" y="258" text-anchor="middle" font-family="Courier New, monospace" font-size="22" font-weight="bold" fill="#fff" transform="rotate(-3 495 250)">chaos ✻</text>
-  <text x="320" y="330" text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" letter-spacing="2" fill="#000">A LOOK INTO MY MIND</text>
-</svg>

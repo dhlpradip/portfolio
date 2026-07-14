@@ -9,7 +9,6 @@ import RioLogo from "@/public/rio.png";
 import euvinLogo from "@/public/euvin-logo.png";
 import npsLogo from "@/public/npsLogo.png";
 import yoAppLogo from "@/public/yoAppLogo.svg";
-import mindCard from "@/public/mind-card.svg";
 import nepalElectionCard from "@/public/nepal-election.svg";
 import neuralErrorsCard from "@/public/neural-errors.svg";
 import variconLogo from "@/public/varicon-logo-1.png";
@@ -138,12 +137,6 @@ export const siteData: SiteData = {
       desc: "An interactive guide to why neural networks fail to train — underfitting, overfitting, vanishing gradients, and their remedies. Created as a presentation for my Master's studies",
       imgUrl: neuralErrorsCard,
       caseStudy: "neural-network-errors",
-    },
-    {
-      title: "Mind",
-      link: "https://mind.erpradeepdahal.com.np",
-      desc: "A neo-brutalist look into my mind — deliberately chaotic, exactly as intended",
-      imgUrl: mindCard,
     },
     {
       title: "Yo App",
