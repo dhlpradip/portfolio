@@ -30,6 +30,7 @@ export function ContactForm() {
         email: formData.get("email") as string,
         subject: formData.get("subject") as string,
         message: formData.get("message") as string,
+        website: formData.get("website") as string,
       });
       setSent(true);
       toast.success("Thank you", {
@@ -85,6 +86,16 @@ export function ContactForm() {
 
         <Reveal delay={0.1}>
           <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+              <label htmlFor="website">Leave this field empty</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
             <div>
               <label
                 htmlFor="email"
