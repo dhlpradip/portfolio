@@ -212,7 +212,7 @@ export const siteData: SiteData = {
       title: "Senior Frontend Developer",
       company: "Varicon",
       logo: variconLogo,
-      year: "Jan 2025 - Present",
+      year: "Jan 2025 - July 2026",
       companyLink: "https://varicon.com.au",
     },
     {
