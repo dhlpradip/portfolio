@@ -23,7 +23,7 @@ import type { SiteData } from "@/lib/types";
 
 export const siteData: SiteData = {
   resumeUrl:
-    "https://drive.google.com/file/d/1bxppc3v_UfV5SJ6CASB64vclPsWNpb8a/view?usp=sharing",
+    "https://drive.google.com/file/d/1b47q-R6PimxYoVMabfrA01rDBK9JB4l-/view?usp=sharing",
   resumeFallback: "/resume.pdf",
   careerStartYear: 2020,
   githubUsername: "dhlpradip",
