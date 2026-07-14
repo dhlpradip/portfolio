@@ -35,7 +35,7 @@ Open [http://localhost:3000](http://localhost:3000).
 Add to `.env.local`:
 
 ```env
-WEB3FORMS_KEY=your_web3forms_access_key
+NEXT_PUBLIC_WEB3FORMS_KEY=your_web3forms_access_key
 
 # Writings section — hidden from nav/search until you set true
 NEXT_PUBLIC_WRITINGS_PUBLIC=false
@@ -75,4 +75,4 @@ public/               # Static assets
 
 ## Deploy
 
-Deploy on [Vercel](https://vercel.com) with `WEB3FORMS_KEY` set in project environment variables.
+Deploy on [Vercel](https://vercel.com) with `NEXT_PUBLIC_WEB3FORMS_KEY` set in project environment variables (Web3Forms keys are public by design — submissions go client-side).
