@@ -39,16 +39,38 @@ export const metadata: Metadata = {
     siteName: siteData.name,
     title: siteData.siteMeta.title,
     description: siteData.siteMeta.description,
-    images: [{ url: siteData.siteMeta.ogImage }],
   },
   twitter: {
     card: "summary_large_image",
     site: siteData.siteMeta.twitterHandle,
     title: siteData.siteMeta.title,
     description: siteData.siteMeta.description,
-    images: [siteData.siteMeta.ogImage],
   },
-  icons: { icon: "/hacked.png" },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteData.name,
+  url: siteData.siteMeta.domain,
+  email: `mailto:${siteData.email}`,
+  jobTitle: "Senior Frontend Developer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Varicon",
+    url: "https://varicon.com.au",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kathmandu",
+    addressCountry: "NP",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Tribhuvan University, Institute of Engineering",
+  },
+  knowsAbout: siteData.techStack,
+  sameAs: siteData.socials.map((social) => social.href),
 };
 
 export default function RootLayout({
@@ -63,6 +85,10 @@ export default function RootLayout({
       className={`${jetbrainsMono.variable} ${fraunces.variable}`}
     >
       <body className="min-h-screen antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

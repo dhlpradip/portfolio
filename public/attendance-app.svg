@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#0f1f1a"/>
+  <rect x="230" y="66" width="180" height="150" rx="16" fill="#163027" stroke="#2fa37a" stroke-width="3"/>
+  <rect x="230" y="66" width="180" height="42" rx="16" fill="#2fa37a"/>
+  <circle cx="270" cy="150" r="6" fill="#57d9a3"/>
+  <rect x="290" y="144" width="90" height="12" rx="6" fill="#2c4a3f"/>
+  <circle cx="270" cy="182" r="6" fill="#57d9a3"/>
+  <rect x="290" y="176" width="70" height="12" rx="6" fill="#2c4a3f"/>
+  <path d="M 355 135 l 10 12 l 20 -24" stroke="#57d9a3" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="286" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff">Attendance App</text>
+  <text x="320" y="324" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#86b8a4">Employee attendance platform · Tech Kunja</text>
+</svg>

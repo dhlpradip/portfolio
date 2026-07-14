@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" rx="48" fill="#1b2436"/>
+  <text x="128" y="120" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="64" font-weight="bold" fill="#8fb8dd">&lt;/&gt;</text>
+  <text x="128" y="185" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#e8eaf0">Freelance</text>
+</svg>

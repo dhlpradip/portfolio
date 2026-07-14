@@ -5,6 +5,8 @@ export type Project = {
   link: string;
   desc: string;
   imgUrl: StaticImageData;
+  /** Slug of an internal case study page under /projects/[slug] */
+  caseStudy?: string;
 };
 
 export type Experience = {
@@ -60,6 +62,8 @@ export type ContactPayload = {
   email: string;
   subject: string;
   message: string;
+  /** Honeypot field — humans never fill this; bots do */
+  website?: string;
 };
 
 export type WritingType = "poetry" | "essay" | "note";

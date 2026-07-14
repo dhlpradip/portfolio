@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#101828"/>
+  <g fill="none" stroke="#26334d" stroke-width="1">
+    <path d="M0 100 H640 M0 200 H640 M0 300 H640 M160 0 V400 M320 0 V400 M480 0 V400"/>
+  </g>
+  <text x="320" y="185" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="52" font-weight="bold" fill="#8fb8dd">&lt;Pradeep/&gt;</text>
+  <text x="320" y="240" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#9aa7ba">This very website — Next.js 15 · TypeScript · Tailwind</text>
+</svg>

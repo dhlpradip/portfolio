@@ -1,7 +1,10 @@
 import TechKunjaLogo from "@/public/tech-kunja.jpeg";
 import ClamphookLogo from "@/public/clamphook.png";
 import TraversunLogo from "@/public/traversun.png";
-import Hacked from "@/public/hacked.png";
+import portfolioCard from "@/public/portfolio-card.svg";
+import nepaliCnnCard from "@/public/nepali-cnn.svg";
+import attendanceAppCard from "@/public/attendance-app.svg";
+import freelanceLogo from "@/public/freelance.svg";
 import RioLogo from "@/public/rio.png";
 import euvinLogo from "@/public/euvin-logo.png";
 import npsLogo from "@/public/npsLogo.png";
@@ -22,7 +25,7 @@ export const siteData: SiteData = {
   careerStartYear: 2020,
   githubUsername: "dhlpradip",
   name: "Pradeep Dahal",
-  avatarUrl: "/hacked.png",
+  avatarUrl: "/avatar.svg",
   email: "erpradeepdahal@gmail.com",
   phone: "+977 9862672724",
   phoneTel: "+9779862672724",
@@ -48,10 +51,10 @@ export const siteData: SiteData = {
     "C++",
   ],
   otherSkills: [
-    "Good interpersonal skill",
-    "Values other's efforts",
+    "Good interpersonal skills",
+    "Values others' efforts",
     "Can lead a team well",
-    "Can communicate in multiple language",
+    "Can communicate in multiple languages",
     "Understands and appreciates good humor",
     "Sarcasm",
   ],
@@ -90,12 +93,14 @@ export const siteData: SiteData = {
       link: "https://github.com/dhlpradip/empty-orchestra",
       desc: "Karaoke maker — strips vocals from local songs or entire YouTube playlists with AI (Demucs) and outputs studio-quality instrumentals",
       imgUrl: emptyOrchestraLogo,
+      caseStudy: "empty-orchestra",
     },
     {
       title: "Express Academy",
       link: "https://github.com/dhlpradip/express-academy",
       desc: "An 18-day interactive Express.js bootcamp with auto-graded exercises in both JavaScript and TypeScript",
       imgUrl: expressAcademyLogo,
+      caseStudy: "express-academy",
     },
     {
       title: "FastAPI Academy",
@@ -108,6 +113,7 @@ export const siteData: SiteData = {
       link: "https://github.com/dhlpradip/learn-agentic-ai",
       desc: "An 8-day interactive course for building AI agents in Python — tool loops, MCP, RAG, and evals with a deterministic offline grader",
       imgUrl: learnAgenticAiLogo,
+      caseStudy: "learn-agentic-ai",
     },
     {
       title: "agent-kit",
@@ -123,8 +129,8 @@ export const siteData: SiteData = {
     },
     {
       title: "Yo App",
-      link: "https://yoapp.com.np",
-      desc: "A Nepal based Payment System Provider (Digital Wallet)",
+      link: "https://nepalpayment.com",
+      desc: "A Nepal based digital wallet by Nepal Payment Solution",
       imgUrl: yoAppLogo,
     },
     {
@@ -148,12 +154,12 @@ export const siteData: SiteData = {
     {
       title: "Clamphook",
       link: "https://clamphook.com",
-      desc: "A entrance preparation website based on Nepal",
+      desc: "An entrance examination preparation platform from Nepal",
       imgUrl: ClamphookLogo,
     },
     {
       title: "Traversun",
-      link: "https://traversun.com",
+      link: "https://techkunja.com",
       desc: "A website for travellers to book Hotels, Restaurants and Vehicles",
       imgUrl: TraversunLogo,
     },
@@ -161,31 +167,19 @@ export const siteData: SiteData = {
       title: "Portfolio",
       link: "https://gitlab.com/dhlpradip/portfolio",
       desc: "The place you currently are in",
-      imgUrl: Hacked,
+      imgUrl: portfolioCard,
     },
     {
       title: "Nepali Character Recognition using Deep CNN",
       link: "https://github.com/dhlpradip/Handwritten-Nepali-Character-Recognition-using-Deep-CNN",
       desc: "A Computer Vision project me and my team completed as our final project of Engineering",
-      imgUrl: Hacked,
+      imgUrl: nepaliCnnCard,
     },
     {
       title: "Attendance App for Tech Kunja",
-      link: "https://attendance.techkunja.com",
-      desc: "Employee attendance platform for tech kunja",
-      imgUrl: Hacked,
-    },
-    {
-      title: "Product Invoicing System",
-      link: "https://github.com/dhlpradip/Simple-Product-Invoicing-System-using-ReactJS",
-      desc: "A simple inventory management and product invoicing system application I created during internship",
-      imgUrl: Hacked,
-    },
-    {
-      title: "Simple Blog App",
-      link: "https://github.com/dhlpradip/Simple-ReactJS-Blog",
-      desc: "A simple blog app based on The Net Ninja's Youtube tutorial I created during internship",
-      imgUrl: Hacked,
+      link: "https://techkunja.com",
+      desc: "Employee attendance platform for Tech Kunja",
+      imgUrl: attendanceAppCard,
     },
   ],
   experience: [
@@ -207,7 +201,7 @@ export const siteData: SiteData = {
     {
       title: "Frontend Developer",
       company: "Freelance",
-      logo: Hacked,
+      logo: freelanceLogo,
       year: "April 2024 - Present",
     },
     {
@@ -224,7 +218,7 @@ export const siteData: SiteData = {
       logo: ClamphookLogo,
       year: "May-Jul 2021",
       companyLink: "https://clamphook.com",
-      desc: "Worked with a competent team on a entrance and competitive examination preparation site. Created UI elements according to FIGMA designs",
+      desc: "Worked with a competent team on an entrance and competitive examination preparation site. Created UI elements according to Figma designs",
     },
     {
       title: "Software Development Intern",
@@ -232,7 +226,7 @@ export const siteData: SiteData = {
       logo: TechKunjaLogo,
       year: "Feb-May 2021",
       companyLink: "https://techkunja.com",
-      desc: "Learned about frontend web and mobile development with ReactJS and React Native. Worked on projects such as personal blog, inventgory management, and an attendance system application.",
+      desc: "Learned about frontend web and mobile development with ReactJS and React Native. Worked on projects such as a personal blog, inventory management, and an attendance system application.",
     },
   ],
   socials: [
@@ -301,7 +295,7 @@ export const siteData: SiteData = {
     description:
       "Welcome to my little nook filled with passion, positivity and poetry.",
     domain: "https://erpradeepdahal.com.np",
-    ogImage: "/hacked.png",
+    ogImage: "/opengraph-image",
     twitterHandle: "@dhlpradip",
     googleVerifications: [
       "rr3sCjhb92dMLITE924tlK9biOnG3vxqIcLF91zc51A",
