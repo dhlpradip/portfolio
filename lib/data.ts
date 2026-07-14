@@ -11,7 +11,7 @@ import npsLogo from "@/public/npsLogo.png";
 import yoAppLogo from "@/public/yoAppLogo.svg";
 import nepalElectionCard from "@/public/nepal-election.svg";
 import nplLogo from "@/public/npl-logo.png";
-import nepaliHomestaysCard from "@/public/nepali-homestays.svg";
+import nepaliHomestaysLogo from "@/public/nepali-homestays-logo.svg";
 import neuralErrorsCard from "@/public/neural-errors.svg";
 import variconLogo from "@/public/varicon-logo-1.png";
 import emptyOrchestraLogo from "@/public/empty-orchestra.svg";
@@ -142,7 +142,7 @@ export const siteData: SiteData = {
       title: "Nepali Homestays",
       link: "https://nepali-homestays-web.vercel.app",
       desc: "A multilingual platform for discovering and booking authentic homestays across Nepal",
-      imgUrl: nepaliHomestaysCard,
+      imgUrl: nepaliHomestaysLogo,
     },
     {
       title: "Neural Network Errors",
