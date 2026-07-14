@@ -214,6 +214,7 @@ export const siteData: SiteData = {
       logo: variconLogo,
       year: "Jan 2025 - July 2026",
       companyLink: "https://varicon.com.au",
+      desc: "Led frontend work on an Australian civil construction cost management platform — engineered and launched core modules like Employee Scheduler and Leave Management, shipped AI-powered features, and modernized legacy code while contributing to Python (Django/FastAPI) backend services.",
     },
     {
       title: "Software Developer",
