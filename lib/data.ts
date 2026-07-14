@@ -9,7 +9,9 @@ import RioLogo from "@/public/rio.png";
 import euvinLogo from "@/public/euvin-logo.png";
 import npsLogo from "@/public/npsLogo.png";
 import yoAppLogo from "@/public/yoAppLogo.svg";
-import mind from "@/public/mind.png";
+import mindCard from "@/public/mind-card.svg";
+import nepalElectionCard from "@/public/nepal-election.svg";
+import neuralErrorsCard from "@/public/neural-errors.svg";
 import variconLogo from "@/public/varicon-logo-1.png";
 import emptyOrchestraLogo from "@/public/empty-orchestra.svg";
 import expressAcademyLogo from "@/public/express-academy.svg";
@@ -122,10 +124,22 @@ export const siteData: SiteData = {
       imgUrl: agentKitLogo,
     },
     {
+      title: "Nepal Election Candidates 2082",
+      link: "https://nepal-election-candidates-2082.vercel.app",
+      desc: "Every candidate in Nepal's 2082 general election, searchable — built on official Election Commission data",
+      imgUrl: nepalElectionCard,
+    },
+    {
+      title: "Neural Network Errors",
+      link: "https://neural-network-errors.vercel.app",
+      desc: "An interactive guide to why neural networks fail to train — underfitting, overfitting, vanishing gradients, and their remedies. Created as a presentation for my Master's studies",
+      imgUrl: neuralErrorsCard,
+    },
+    {
       title: "Mind",
       link: "https://mind.erpradeepdahal.com.np",
-      desc: "A look into my mind",
-      imgUrl: mind,
+      desc: "A neo-brutalist look into my mind — deliberately chaotic, exactly as intended",
+      imgUrl: mindCard,
     },
     {
       title: "Yo App",

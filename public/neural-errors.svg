@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#0d1524"/>
+  <g fill="none" stroke="#26334d" stroke-width="1">
+    <path d="M140 220 H500 M140 180 H500 M140 140 H500 M140 100 H500"/>
+  </g>
+  <path d="M140 220 V80 M140 220 H500" stroke="#4a5b7a" stroke-width="2" fill="none"/>
+  <path d="M145 100 C 220 130, 300 190, 495 205" stroke="#38bdf8" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M145 105 C 230 150, 280 195, 340 175 C 390 160, 430 110, 495 90" stroke="#fb7185" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="2 9"/>
+  <text x="505" y="210" font-family="Menlo, Consolas, monospace" font-size="15" fill="#38bdf8">train</text>
+  <text x="505" y="95" font-family="Menlo, Consolas, monospace" font-size="15" fill="#fb7185">val</text>
+  <text x="320" y="290" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="33" font-weight="bold" fill="#ffffff">Neural Network Errors</text>
+  <text x="320" y="328" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#8fa3c4">An interactive guide to training failure modes</text>
+</svg>
