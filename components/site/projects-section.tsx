@@ -45,10 +45,12 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
           <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground md:text-base">
             {project.desc}
           </p>
-          <span className="mt-5 inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-widest text-primary opacity-0 transition-all group-hover:opacity-100">
-            {project.caseStudy ? "Read case study" : "Open project"}
-            <span aria-hidden>→</span>
-          </span>
+          {(project.caseStudy || project.link) && (
+            <span className="mt-5 inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-widest text-primary opacity-0 transition-all group-hover:opacity-100">
+              {project.caseStudy ? "Read case study" : "Open project"}
+              <span aria-hidden>→</span>
+            </span>
+          )}
         </div>
     </>
   );
@@ -59,7 +61,7 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
         <Link href={`/projects/${project.caseStudy}`} className={cardClassName}>
           {cardBody}
         </Link>
-      ) : (
+      ) : project.link ? (
         <a
           href={project.link}
           target="_blank"
@@ -68,6 +70,8 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
         >
           {cardBody}
         </a>
+      ) : (
+        <div className={cardClassName}>{cardBody}</div>
       )}
     </Reveal>
   );

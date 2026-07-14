@@ -93,7 +93,6 @@ export const siteData: SiteData = {
     },
     {
       title: "Nepal Premier League",
-      link: "https://nepalpremierleague.com",
       desc: "Built the player registration platform (with payments and admin flows) and the initial website for Nepal's national T20 cricket league",
       imgUrl: nplLogo,
     },

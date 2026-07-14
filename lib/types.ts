@@ -2,7 +2,8 @@ import type { StaticImageData } from "next/image";
 
 export type Project = {
   title: string;
-  link: string;
+  /** External URL; omit for projects with nothing public to link */
+  link?: string;
   desc: string;
   imgUrl: StaticImageData;
   /** Slug of an internal case study page under /projects/[slug] */
