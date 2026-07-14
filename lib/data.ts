@@ -10,6 +10,8 @@ import euvinLogo from "@/public/euvin-logo.png";
 import npsLogo from "@/public/npsLogo.png";
 import yoAppLogo from "@/public/yoAppLogo.svg";
 import nepalElectionCard from "@/public/nepal-election.svg";
+import nplCard from "@/public/npl-card.svg";
+import nepaliHomestaysCard from "@/public/nepali-homestays.svg";
 import neuralErrorsCard from "@/public/neural-errors.svg";
 import variconLogo from "@/public/varicon-logo-1.png";
 import emptyOrchestraLogo from "@/public/empty-orchestra.svg";
@@ -90,6 +92,12 @@ export const siteData: SiteData = {
       imgUrl: variconLogo,
     },
     {
+      title: "Nepal Premier League",
+      link: "https://nepalpremierleague.com",
+      desc: "Built the player registration platform (with payments and admin flows) and the initial website for Nepal's national T20 cricket league",
+      imgUrl: nplCard,
+    },
+    {
       title: "Empty Orchestra",
       link: "https://github.com/dhlpradip/empty-orchestra",
       desc: "Karaoke maker — strips vocals from local songs or entire YouTube playlists with AI (Demucs) and outputs studio-quality instrumentals",
@@ -130,6 +138,12 @@ export const siteData: SiteData = {
       desc: "Every candidate in Nepal's 2082 general election, searchable — built on official Election Commission data",
       imgUrl: nepalElectionCard,
       caseStudy: "nepal-election-2082",
+    },
+    {
+      title: "Nepali Homestays",
+      link: "https://nepali-homestays-web.vercel.app",
+      desc: "A multilingual platform for discovering and booking authentic homestays across Nepal",
+      imgUrl: nepaliHomestaysCard,
     },
     {
       title: "Neural Network Errors",
@@ -215,6 +229,7 @@ export const siteData: SiteData = {
       company: "Freelance",
       logo: freelanceLogo,
       year: "April 2024 - Present",
+      desc: "Selected engagements: player registration platform and initial website for the Nepal Premier League (NPL), and the web frontend for Nepali Homestays, a multilingual homestay booking platform.",
     },
     {
       title: "Software Engineer",
