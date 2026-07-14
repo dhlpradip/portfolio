@@ -176,7 +176,7 @@ export const siteData: SiteData = {
     },
     {
       title: "Portfolio",
-      link: "https://gitlab.com/dhlpradip/portfolio",
+      link: "https://github.com/dhlpradip/portfolio",
       desc: "The place you currently are in",
       imgUrl: portfolioCard,
     },
