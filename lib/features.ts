@@ -1,7 +1,8 @@
 /**
- * Feature flags. Flip NEXT_PUBLIC_WRITINGS_PUBLIC=true in .env.local
- * when writings are ready to appear in navigation and search engines.
+ * Feature flags. Writings are public by default; set
+ * NEXT_PUBLIC_WRITINGS_PUBLIC=false to hide the section from
+ * navigation and search engines again.
  */
 export const features = {
-  writingsPublic: process.env.NEXT_PUBLIC_WRITINGS_PUBLIC === "true",
+  writingsPublic: process.env.NEXT_PUBLIC_WRITINGS_PUBLIC !== "false",
 } as const;
