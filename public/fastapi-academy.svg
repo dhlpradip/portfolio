@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#062e2b"/>
+  <circle cx="320" cy="150" r="72" fill="none" stroke="#05998b" stroke-width="10"/>
+  <path d="M 330 96 L 292 162 L 318 162 L 310 204 L 348 138 L 322 138 Z" fill="#2dd4bf"/>
+  <text x="320" y="288" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="bold" fill="#e6fffb">FastAPI Academy</text>
+  <text x="320" y="326" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#7fc9c0">18-day bootcamp · SQL · SQLAlchemy · MongoDB · Docker</text>
+</svg>

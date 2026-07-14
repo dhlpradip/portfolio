@@ -8,11 +8,16 @@ import npsLogo from "@/public/npsLogo.png";
 import yoAppLogo from "@/public/yoAppLogo.svg";
 import mind from "@/public/mind.png";
 import variconLogo from "@/public/varicon-logo-1.png";
+import emptyOrchestraLogo from "@/public/empty-orchestra.svg";
+import expressAcademyLogo from "@/public/express-academy.svg";
+import fastapiAcademyLogo from "@/public/fastapi-academy.svg";
+import learnAgenticAiLogo from "@/public/learn-agentic-ai.svg";
+import agentKitLogo from "@/public/agent-kit.svg";
 import type { SiteData } from "@/lib/types";
 
 export const siteData: SiteData = {
   resumeUrl:
-    "https://drive.google.com/file/d/10a5E7a1seJW99IYRp7CTKfAYRe9r9DS6/view?usp=sharing",
+    "https://drive.google.com/file/d/1bxppc3v_UfV5SJ6CASB64vclPsWNpb8a/view?usp=sharing",
   resumeFallback: "/resume.pdf",
   careerStartYear: 2020,
   githubUsername: "dhlpradip",
@@ -36,9 +41,11 @@ export const siteData: SiteData = {
     "Bootstrap",
     "Styled Components",
     "SASS/SCSS",
+    "Express",
+    "Python",
+    "FastAPI",
     "C",
     "C++",
-    "Python",
   ],
   otherSkills: [
     "Good interpersonal skill",
@@ -77,6 +84,36 @@ export const siteData: SiteData = {
       link: "https://varicon.com.au",
       desc: "An Australian Civil Engineering Cost Management Solution",
       imgUrl: variconLogo,
+    },
+    {
+      title: "Empty Orchestra",
+      link: "https://github.com/dhlpradip/empty-orchestra",
+      desc: "Karaoke maker — strips vocals from local songs or entire YouTube playlists with AI (Demucs) and outputs studio-quality instrumentals",
+      imgUrl: emptyOrchestraLogo,
+    },
+    {
+      title: "Express Academy",
+      link: "https://github.com/dhlpradip/express-academy",
+      desc: "An 18-day interactive Express.js bootcamp with auto-graded exercises in both JavaScript and TypeScript",
+      imgUrl: expressAcademyLogo,
+    },
+    {
+      title: "FastAPI Academy",
+      link: "https://github.com/dhlpradip/learn-fastapi",
+      desc: "An 18-day interactive FastAPI + databases bootcamp — auto-graded exercises covering raw SQL, SQLAlchemy, MongoDB, and Docker",
+      imgUrl: fastapiAcademyLogo,
+    },
+    {
+      title: "Learn Agentic AI",
+      link: "https://github.com/dhlpradip/learn-agentic-ai",
+      desc: "An 8-day interactive course for building AI agents in Python — tool loops, MCP, RAG, and evals with a deterministic offline grader",
+      imgUrl: learnAgenticAiLogo,
+    },
+    {
+      title: "agent-kit",
+      link: "https://github.com/dhlpradip/agent-kit",
+      desc: "A portable, tool-agnostic AI coding workflow built on the AGENTS.md standard — one installer for Claude Code, Cursor, Copilot, and more",
+      imgUrl: agentKitLogo,
     },
     {
       title: "Mind",
@@ -153,7 +190,7 @@ export const siteData: SiteData = {
   ],
   experience: [
     {
-      title: "Mid Level Frontend Developer",
+      title: "Senior Frontend Developer",
       company: "Varicon",
       logo: variconLogo,
       year: "Jan 2025 - Present",
