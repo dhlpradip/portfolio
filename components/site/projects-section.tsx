@@ -12,16 +12,11 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project, index, featured }: ProjectCardProps) {
-  return (
-    <Reveal delay={index * 0.07}>
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`card-shine group relative flex h-full flex-col overflow-hidden border border-border bg-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 ${
-          featured ? "lg:col-span-2 lg:row-span-2" : ""
-        }`}
-      >
+  const cardClassName = `card-shine group relative flex h-full flex-col overflow-hidden border border-border bg-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 ${
+    featured ? "lg:col-span-2 lg:row-span-2" : ""
+  }`;
+  const cardBody = (
+    <>
         <div
           className={`relative w-full overflow-hidden bg-secondary/30 ${
             featured ? "aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[280px]" : "aspect-[16/11]"
@@ -51,11 +46,29 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
             {project.desc}
           </p>
           <span className="mt-5 inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-widest text-primary opacity-0 transition-all group-hover:opacity-100">
-            Open project
+            {project.caseStudy ? "Read case study" : "Open project"}
             <span aria-hidden>→</span>
           </span>
         </div>
-      </a>
+    </>
+  );
+
+  return (
+    <Reveal delay={index * 0.07}>
+      {project.caseStudy ? (
+        <Link href={`/projects/${project.caseStudy}`} className={cardClassName}>
+          {cardBody}
+        </Link>
+      ) : (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cardClassName}
+        >
+          {cardBody}
+        </a>
+      )}
     </Reveal>
   );
 }
