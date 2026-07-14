@@ -10,7 +10,7 @@ import euvinLogo from "@/public/euvin-logo.png";
 import npsLogo from "@/public/npsLogo.png";
 import yoAppLogo from "@/public/yoAppLogo.svg";
 import nepalElectionCard from "@/public/nepal-election.svg";
-import nplCard from "@/public/npl-card.svg";
+import nplLogo from "@/public/npl-logo.png";
 import nepaliHomestaysCard from "@/public/nepali-homestays.svg";
 import neuralErrorsCard from "@/public/neural-errors.svg";
 import variconLogo from "@/public/varicon-logo-1.png";
@@ -95,7 +95,7 @@ export const siteData: SiteData = {
       title: "Nepal Premier League",
       link: "https://nepalpremierleague.com",
       desc: "Built the player registration platform (with payments and admin flows) and the initial website for Nepal's national T20 cricket league",
-      imgUrl: nplCard,
+      imgUrl: nplLogo,
     },
     {
       title: "Empty Orchestra",
