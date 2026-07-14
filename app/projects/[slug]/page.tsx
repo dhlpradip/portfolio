@@ -73,15 +73,28 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 </span>
               ))}
             </div>
-            <a
-              href={caseStudy.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wider transition-colors hover:border-primary/50 hover:text-primary"
-            >
-              <AiOutlineGithub className="h-4 w-4" />
-              View source
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={caseStudy.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wider transition-colors hover:border-primary/50 hover:text-primary"
+              >
+                <AiOutlineGithub className="h-4 w-4" />
+                View source
+              </a>
+              {caseStudy.liveUrl && (
+                <a
+                  href={caseStudy.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 font-mono text-xs font-medium uppercase tracking-wider text-primary-foreground transition-opacity hover:opacity-90"
+                >
+                  Visit site
+                  <span aria-hidden>↗</span>
+                </a>
+              )}
+            </div>
           </header>
         </Reveal>
 

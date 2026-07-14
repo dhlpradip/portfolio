@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteData } from "@/lib/data";
 import { features } from "@/lib/features";
 import { getWritings } from "@/lib/writings";
+import { caseStudies } from "@/lib/case-studies";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteData.siteMeta.domain;
@@ -12,6 +13,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/projects`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/experience`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/contact`, changeFrequency: "yearly", priority: 0.5 },
+    ...caseStudies.map((cs) => ({
+      url: `${base}/projects/${cs.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 
   if (!features.writingsPublic) {

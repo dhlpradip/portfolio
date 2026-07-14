@@ -109,6 +109,7 @@ export const siteData: SiteData = {
       link: "https://github.com/dhlpradip/learn-fastapi",
       desc: "An 18-day interactive FastAPI + databases bootcamp — auto-graded exercises covering raw SQL, SQLAlchemy, MongoDB, and Docker",
       imgUrl: fastapiAcademyLogo,
+      caseStudy: "fastapi-academy",
     },
     {
       title: "Learn Agentic AI",
@@ -122,18 +123,21 @@ export const siteData: SiteData = {
       link: "https://github.com/dhlpradip/agent-kit",
       desc: "A portable, tool-agnostic AI coding workflow built on the AGENTS.md standard — one installer for Claude Code, Cursor, Copilot, and more",
       imgUrl: agentKitLogo,
+      caseStudy: "agent-kit",
     },
     {
       title: "Nepal Election Candidates 2082",
       link: "https://nepal-election-candidates-2082.vercel.app",
       desc: "Every candidate in Nepal's 2082 general election, searchable — built on official Election Commission data",
       imgUrl: nepalElectionCard,
+      caseStudy: "nepal-election-2082",
     },
     {
       title: "Neural Network Errors",
       link: "https://neural-network-errors.vercel.app",
       desc: "An interactive guide to why neural networks fail to train — underfitting, overfitting, vanishing gradients, and their remedies. Created as a presentation for my Master's studies",
       imgUrl: neuralErrorsCard,
+      caseStudy: "neural-network-errors",
     },
     {
       title: "Mind",
@@ -188,6 +192,7 @@ export const siteData: SiteData = {
       link: "https://github.com/dhlpradip/Handwritten-Nepali-Character-Recognition-using-Deep-CNN",
       desc: "A Computer Vision project me and my team completed as our final project of Engineering",
       imgUrl: nepaliCnnCard,
+      caseStudy: "nepali-character-recognition",
     },
     {
       title: "Attendance App for Tech Kunja",

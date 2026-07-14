@@ -2,6 +2,11 @@ import type { StaticImageData } from "next/image";
 import emptyOrchestraLogo from "@/public/empty-orchestra.svg";
 import expressAcademyLogo from "@/public/express-academy.svg";
 import learnAgenticAiLogo from "@/public/learn-agentic-ai.svg";
+import fastapiAcademyLogo from "@/public/fastapi-academy.svg";
+import agentKitLogo from "@/public/agent-kit.svg";
+import neuralErrorsCard from "@/public/neural-errors.svg";
+import nepalElectionCard from "@/public/nepal-election.svg";
+import nepaliCnnCard from "@/public/nepali-cnn.svg";
 
 export type CaseStudySection = {
   heading: string;
@@ -15,6 +20,7 @@ export type CaseStudy = {
   year: string;
   stack: string[];
   repoUrl: string;
+  liveUrl?: string;
   heroImage: StaticImageData;
   sections: CaseStudySection[];
 };
@@ -171,6 +177,236 @@ export const caseStudies: CaseStudy[] = [
         heading: "Outcome",
         paragraphs: [
           "Eight days, a 33-test quality gate passing end-to-end, and all three courses (Express, FastAPI, Agentic AI) run side-by-side on separate ports — a personal backend-to-AI curriculum that grades itself.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "fastapi-academy",
+    title: "FastAPI Academy",
+    tagline:
+      "An 18-day interactive FastAPI bootcamp with a databases arc — raw SQL, SQLAlchemy, MongoDB, and Docker — every exercise graded automatically.",
+    year: "2026",
+    stack: [
+      "Python",
+      "FastAPI",
+      "SQLite",
+      "SQLAlchemy",
+      "MongoDB",
+      "React",
+      "TypeScript",
+      "Docker",
+    ],
+    repoUrl: "https://github.com/dhlpradip/learn-fastapi",
+    heroImage: fastapiAcademyLogo,
+    sections: [
+      {
+        heading: "The problem",
+        paragraphs: [
+          "After building Express Academy for Node, I wanted the same muscle-building workout for Python's web stack — and I wanted it to cover the thing most web courses skip past: databases, done properly, from raw SQL upward.",
+          "Same philosophy as its sibling: no passive tutorials. A grading server runs real requests against your FastAPI app and tells you exactly what failed.",
+        ],
+      },
+      {
+        heading: "Architecture",
+        paragraphs: [
+          "The platform is a FastAPI grader that boots each submission in an isolated child process under uvicorn, paired with a React + TypeScript client that fetches exercise specs straight from the grader. A single npm run setup creates the Python virtualenv and installs everything; the whole course runs offline.",
+          "It deliberately shares no code with Express Academy — the grader specs, runner, and client were rebuilt Python-first — but the two run side by side on different ports, so you can work through both stacks in parallel.",
+        ],
+      },
+      {
+        heading: "The databases arc",
+        paragraphs: [
+          "The distinctive part of this course is a multi-day data arc: raw SQL on a real sqlite3 database — including an exercise where the grader actively attempts SQL injection against your endpoint and fails you if it succeeds — then SQLAlchemy (with the StaticPool gotcha that bites everyone testing against in-memory SQLite), transactions and atomicity, and MongoDB via an in-process fake driver.",
+          "Real database engines where it matters (SQLite is genuinely embedded, so injection and transaction semantics are real), simulated services where setup friction would kill momentum (no one should need a Mongo cluster to learn query syntax).",
+        ],
+      },
+      {
+        heading: "Decisions and trade-offs",
+        paragraphs: [
+          "Every lesson carries Django comparison notes — I work near Django at my day job, so each FastAPI concept is anchored to its Django equivalent. Learning two frameworks' shapes at once turned out to be cheaper than learning them separately.",
+          "The course ends with a Docker day and ships a working Dockerfile and docker-compose (Postgres + Redis) so the exit ramp from 'course' to 'real project' is already paved.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "18 days, 116 grader tests, all passing via a single npm run check quality gate. Together with Express Academy and Learn Agentic AI, it forms a self-graded curriculum that took me from React developer to working across the backend.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "agent-kit",
+    title: "agent-kit",
+    tagline:
+      "One AI-coding workflow that travels with you — a single source of truth every assistant reads, whatever the tool, whatever the provider.",
+    year: "2026",
+    stack: [
+      "Shell",
+      "AGENTS.md",
+      "Claude Code",
+      "Cursor",
+      "Copilot",
+      "MCP",
+    ],
+    repoUrl: "https://github.com/dhlpradip/agent-kit",
+    heroImage: agentKitLogo,
+    sections: [
+      {
+        heading: "The problem",
+        paragraphs: [
+          "Every AI coding tool demands its own instruction file: Claude Code reads CLAUDE.md, Cursor wants .mdc rules, Copilot has copilot-instructions.md, Windsurf and Aider have their own formats. Keep them all by hand and they drift apart within a week — the guidance your assistants follow depends on which editor you happened to open.",
+          "I wanted to write my engineering conventions once and have every tool obey the same brief.",
+        ],
+      },
+      {
+        heading: "The approach",
+        paragraphs: [
+          "The kit standardizes on AGENTS.md — the open, tool-agnostic standard — as the single source of truth, then generates thin adapters for everything else: a CLAUDE.md that imports AGENTS.md, Cursor rule files, a Copilot symlink, Windsurf, Gemini, and Aider bridges.",
+          "An install.sh detects the project's stack from its manifests — React, Next.js, Express, Python, FastAPI, or agentic-AI — and assembles AGENTS.md from composable modules, so an Express API and a Python agent project get different, relevant guidance from the same kit. Python-AI projects additionally get an .mcp.json and a provider-agnostic .env.example.",
+        ],
+      },
+      {
+        heading: "Decisions and trade-offs",
+        paragraphs: [
+          "Composition over monolith: conventions live in small module files that the installer stitches together, so fixing a rule fixes it for every stack that includes that module.",
+          "Adapters over waiting for standards adoption: not every tool reads AGENTS.md natively yet (Claude Code still doesn't, as of 2026), so the kit meets each tool where it is rather than betting on convergence.",
+          "It also ships a shared command and skill library, so custom workflows — not just static instructions — travel between tools too.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "One ./install.sh in any repo and every assistant I use reads the same conventions. The kit now bootstraps all of my personal projects, including the three interactive courses and this portfolio's sibling repos.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "neural-network-errors",
+    title: "Neural Network Errors",
+    tagline:
+      "An interactive guide to why neural networks fail to train — built as a presentation for my Master's studies, designed to outlive the lecture.",
+    year: "2026",
+    stack: ["HTML", "CSS", "JavaScript", "Interactive visualization"],
+    repoUrl: "https://github.com/dhlpradip/neural-network-errors",
+    liveUrl: "https://neural-errors.erpradeepdahal.com.np",
+    heroImage: neuralErrorsCard,
+    sections: [
+      {
+        heading: "The context",
+        paragraphs: [
+          "For my M.Sc. in Intelligent Systems, I had to present the practical issues of neural network training — the material drawn from Goodfellow, Bengio, and Courville's Deep Learning. I could have made slides. But the whole point of these failure modes is how they behave, and behavior is exactly what static slides can't show.",
+          "So the presentation became an interactive web page instead: the audience watches curves diverge and weights collapse live, and the artifact keeps working as a study reference long after the class ended.",
+        ],
+      },
+      {
+        heading: "What it covers",
+        paragraphs: [
+          "The five failure modes every practitioner eventually meets: underfitting, overfitting, vanishing and exploding gradients, convergence difficulties, and local or spurious optima — paired with their remedies: L1/L2 regularization and dropout, parameter sharing and convolutional structure, early stopping, deeper architectures, and better optimizers.",
+        ],
+      },
+      {
+        heading: "The interactive demos",
+        paragraphs: [
+          "Each concept has a manipulable visual: a polynomial-fit playground where you crank model complexity and watch it swing from underfit to overfit, live training-versus-validation error curves, weight distributions morphing under different regularization modes, a convolution filter-sharing demo, and a loss-landscape view that builds intuition for optimizer behavior, local optima, and saddle points.",
+        ],
+      },
+      {
+        heading: "Decisions and trade-offs",
+        paragraphs: [
+          "The entire site is a single self-contained index.html — no build step, no framework, no dependencies. That was a presentation-day constraint turned feature: it opens from a file:// URL, survives a venue with no Wi-Fi, and will still render unchanged in a decade.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "Presented for my Master's coursework and now live on its own subdomain, where it doubles as the revision reference I wish I'd had before building my undergraduate CNN project.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "nepal-election-2082",
+    title: "Nepal Election Candidates 2082",
+    tagline:
+      "Every candidate in Nepal's 2082 general election, searchable and filterable — official Election Commission data made actually browsable.",
+    year: "2026",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "shadcn/ui",
+      "Vercel",
+    ],
+    repoUrl: "https://github.com/dhlpradip/nepal-election-candidates-2082",
+    liveUrl: "https://nepal-election-candidates-2082.vercel.app",
+    heroImage: nepalElectionCard,
+    sections: [
+      {
+        heading: "The problem",
+        paragraphs: [
+          "Ahead of Nepal's 2082 general election, the candidate information voters actually needed was scattered and hard to browse. The Election Commission publishes the data, but 'published' and 'usable by someone deciding who represents their constituency' are very different things.",
+          "I wanted a page where anyone could answer, in seconds: who is standing in my constituency, and for which party?",
+        ],
+      },
+      {
+        heading: "The build",
+        paragraphs: [
+          "A Next.js App Router application in TypeScript: candidate cards with party branding, filter and search controls over party and constituency, per-constituency information, and shadcn/ui components with loading skeletons to keep the browsing experience smooth over a large candidate list.",
+          "Since discoverability was the entire point, it ships proper sitemap and robots metadata routes — someone searching for their constituency should land here.",
+        ],
+      },
+      {
+        heading: "Decisions and trade-offs",
+        paragraphs: [
+          "The data belongs to the Election Commission of Nepal, and the site says so plainly — it adds presentation, search, and speed, not editorial opinion. Neutrality is a feature: every party gets the same card, the same filters, the same treatment.",
+          "Shipping speed mattered more than architectural purity here; the election has a date, and a civic tool that launches after the vote is worthless. Next.js on Vercel meant the gap between 'data ready' and 'live URL' was hours.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "Live during the 2082 election cycle at a public URL, giving voters a fast, neutral way to explore who was on their ballot.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "nepali-character-recognition",
+    title: "Handwritten Nepali Character Recognition",
+    tagline:
+      "A deep CNN that reads handwritten Devanagari — my undergraduate final-year project, reaching 99% validation accuracy.",
+    year: "2019",
+    stack: ["Python", "Keras", "Deep CNN", "Flask"],
+    repoUrl:
+      "https://github.com/dhlpradip/Handwritten-Nepali-Character-Recognition-using-Deep-CNN",
+    heroImage: nepaliCnnCard,
+    sections: [
+      {
+        heading: "The problem",
+        paragraphs: [
+          "Handwritten character recognition is a solved demo for Latin script — and a genuinely hard problem for Devanagari, where characters share a connecting headline (dika), differ by subtle strokes, and handwriting styles vary enormously. For our final-year Computer Engineering project at IOE, my team of four took on recognizing handwritten Nepali characters.",
+        ],
+      },
+      {
+        heading: "The approach",
+        paragraphs: [
+          "We built a deep convolutional neural network in Keras, trained on a labeled dataset of handwritten Devanagari characters, and wrapped it in a Flask interface so anyone could try the model against their own handwriting rather than taking our accuracy numbers on faith.",
+        ],
+      },
+      {
+        heading: "The experiment that mattered",
+        paragraphs: [
+          "We trained the same architecture under two optimizers — Adam and Nadam — and compared them properly instead of trusting defaults. Nadam, which adds Nesterov momentum to Adam's adaptive learning rates, consistently outperformed and carried the model to 99% validation accuracy.",
+          "As an undergraduate lesson, that comparison outlasted the accuracy number: the optimizer is a hyperparameter, and measuring beats assuming.",
+        ],
+      },
+      {
+        heading: "Looking back",
+        paragraphs: [
+          "This project — built with Anish Baral, Diwash Khanal, and Prabin Baskota — is where my interest in machine learning started. Years later it led me back: my Master's work on neural network training failures is, in a real sense, the theory behind everything we debugged empirically here.",
         ],
       },
     ],
