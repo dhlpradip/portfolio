@@ -5,13 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import {
-  AiFillGitlab,
-  AiOutlineGithub,
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { siteData } from "@/lib/data";
 import { features } from "@/lib/features";
@@ -34,11 +29,9 @@ const navLinks = [
 ];
 
 const iconMap = {
-  instagram: AiOutlineInstagram,
-  twitter: AiOutlineTwitter,
+  x: FaXTwitter,
   linkedin: AiOutlineLinkedin,
   github: AiOutlineGithub,
-  gitlab: AiFillGitlab,
 } as const;
 
 export function Navbar() {
@@ -90,7 +83,9 @@ export function Navbar() {
 
           <div className="flex items-center gap-1">
             <div className="hidden items-center md:flex">
-              {siteData.socials.map((social) => {
+              {siteData.socials
+                .filter((social) => social.nav)
+                .map((social) => {
                 const Icon = iconMap[social.icon];
                 return (
                   <Tooltip key={social.name}>
@@ -108,7 +103,7 @@ export function Navbar() {
                     <TooltipContent>{social.name}</TooltipContent>
                   </Tooltip>
                 );
-              })}
+                })}
             </div>
             <ThemeToggle />
             <button

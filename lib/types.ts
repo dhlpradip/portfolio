@@ -27,7 +27,9 @@ export type Education = {
 export type Social = {
   name: string;
   href: string;
-  icon: "instagram" | "twitter" | "linkedin" | "github" | "gitlab";
+  icon: "x" | "linkedin" | "github";
+  /** Show in the navbar pill (footer always shows all socials) */
+  nav?: boolean;
 };
 
 export type HeroCopy = {

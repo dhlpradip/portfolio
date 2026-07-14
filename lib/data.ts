@@ -243,29 +243,21 @@ export const siteData: SiteData = {
   ],
   socials: [
     {
-      name: "Instagram",
-      href: "https://instagram.com/peedarplahad",
-      icon: "instagram",
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/dhlpradip",
-      icon: "twitter",
+      name: "GitHub",
+      href: "https://github.com/dhlpradip",
+      icon: "github",
+      nav: true,
     },
     {
       name: "LinkedIn",
       href: "https://linkedin.com/in/dhlpradip",
       icon: "linkedin",
+      nav: true,
     },
     {
-      name: "GitHub",
-      href: "https://github.com/dhlpradip",
-      icon: "github",
-    },
-    {
-      name: "GitLab",
-      href: "https://gitlab.com/dhlpradip",
-      icon: "gitlab",
+      name: "X",
+      href: "https://twitter.com/dhlpradip",
+      icon: "x",
     },
   ],
   hero: {

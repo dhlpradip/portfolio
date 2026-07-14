@@ -1,12 +1,7 @@
 "use client";
 
-import {
-  AiFillGitlab,
-  AiOutlineGithub,
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { siteData } from "@/lib/data";
 import {
@@ -18,11 +13,9 @@ import {
 import { PageShell } from "@/components/site/page-shell";
 
 const iconMap = {
-  instagram: AiOutlineInstagram,
-  twitter: AiOutlineTwitter,
+  x: FaXTwitter,
   linkedin: AiOutlineLinkedin,
   github: AiOutlineGithub,
-  gitlab: AiFillGitlab,
 } as const;
 
 export function Footer() {
