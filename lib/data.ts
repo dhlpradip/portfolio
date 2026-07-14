@@ -71,7 +71,7 @@ export const siteData: SiteData = {
     {
       school: "Tribhuvan University, Institute of Engineering",
       level: "Bachelor's in Computer Engineering",
-      duration: "2015-2019",
+      duration: "2015-2021",
     },
     {
       school: "Siddhartha Boarding HSS",
@@ -214,13 +214,13 @@ export const siteData: SiteData = {
       logo: variconLogo,
       year: "Jan 2025 - July 2026",
       companyLink: "https://varicon.com.au",
-      desc: "Led frontend work on an Australian civil construction cost management platform — engineered and launched core modules like Employee Scheduler and Leave Management, shipped AI-powered features, and modernized legacy code while contributing to Python (Django/FastAPI) backend services.",
+      desc: "Engineered and launched core modules — including Employee Scheduler and Leave Management — on an Australian civil construction cost management platform. Shipped AI-powered features, modernized legacy code, and contributed to Python (Django/FastAPI) backend services.",
     },
     {
       title: "Software Developer",
       company: "Nepal Payment Solution",
       logo: npsLogo,
-      year: "June 2024 - Jan 2025",
+      year: "June 2024 - Dec 2024",
       companyLink: "https://nepalpayment.com",
       desc: "Worked as the primary frontend developer for a leading payment system provider in Nepal",
     },
@@ -243,7 +243,7 @@ export const siteData: SiteData = {
       title: "Software Developer",
       company: "Clamphook",
       logo: ClamphookLogo,
-      year: "May-Jul 2021",
+      year: "Jun-Aug 2021",
       companyLink: "https://clamphook.com",
       desc: "Worked with a competent team on an entrance and competitive examination preparation site. Created UI elements according to Figma designs",
     },
@@ -297,7 +297,7 @@ export const siteData: SiteData = {
       "Other than speaking code,",
     ],
     multilingualLines: [
-      "I can speak English,",
+      "I can speak English (IELTS 8.0, if you want it in writing),",
       "म नेपाली बोल्न सक्छु,",
       "मैँ हिन्दी बोल सकता हूँ,",
       "und Ich kann ein bisschen Deutsch sprechen.",
