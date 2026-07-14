@@ -55,11 +55,6 @@ const personJsonLd = {
   url: siteData.siteMeta.domain,
   email: `mailto:${siteData.email}`,
   jobTitle: "Senior Frontend Developer",
-  worksFor: {
-    "@type": "Organization",
-    name: "Varicon",
-    url: "https://varicon.com.au",
-  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Kathmandu",

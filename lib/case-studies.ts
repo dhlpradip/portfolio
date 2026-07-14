@@ -224,7 +224,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Decisions and trade-offs",
         paragraphs: [
-          "Every lesson carries Django comparison notes — I work near Django at my day job, so each FastAPI concept is anchored to its Django equivalent. Learning two frameworks' shapes at once turned out to be cheaper than learning them separately.",
+          "Every lesson carries Django comparison notes — I was working near Django at my day job at the time, so each FastAPI concept is anchored to its Django equivalent. Learning two frameworks' shapes at once turned out to be cheaper than learning them separately.",
           "The course ends with a Docker day and ships a working Dockerfile and docker-compose (Postgres + Redis) so the exit ramp from 'course' to 'real project' is already paved.",
         ],
       },
