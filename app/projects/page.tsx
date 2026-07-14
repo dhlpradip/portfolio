@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ProjectsSection } from "@/components/site/projects-section";
+import { GithubRepos } from "@/components/site/github-repos";
 import { PageShell, Section } from "@/components/site/page-shell";
 import { siteData } from "@/lib/data";
 
@@ -14,6 +15,7 @@ export default function ProjectsPage() {
       <Section label="Selected work" alt>
         <ProjectsSection />
       </Section>
+      <GithubRepos />
     </PageShell>
   );
 }
