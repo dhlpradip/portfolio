@@ -7,6 +7,7 @@ import agentKitLogo from "@/public/agent-kit.svg";
 import neuralErrorsCard from "@/public/neural-errors.svg";
 import nepalElectionCard from "@/public/nepal-election.svg";
 import nepaliCnnCard from "@/public/nepali-cnn.svg";
+import sendThemASongLogo from "@/public/sendthemasong.svg";
 
 export type CaseStudySection = {
   heading: string;
@@ -407,6 +408,63 @@ export const caseStudies: CaseStudy[] = [
         heading: "Looking back",
         paragraphs: [
           "This project — built with Anish Baral, Diwash Khanal, and Prabin Baskota — is where my interest in machine learning started. Years later it led me back: my Master's work on neural network training failures is, in a real sense, the theory behind everything we debugged empirically here.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "send-them-a-song",
+    title: "Send Them A Song",
+    tagline:
+      "A digital mixtape postcard — pick songs from YouTube, write a note, and share a link that opens as an animated card with a cassette illustration and built-in player.",
+    year: "2026",
+    stack: [
+      "Next.js 16",
+      "TypeScript",
+      "React",
+      "Tailwind v4",
+      "Framer Motion",
+      "Upstash Redis",
+      "YouTube IFrame API",
+    ],
+    repoUrl: "https://github.com/dhlpradip/sendthemasong",
+    liveUrl: "https://mixtape.erpradeepdahal.com.np",
+    heroImage: sendThemASongLogo,
+    sections: [
+      {
+        heading: "The idea",
+        paragraphs: [
+          "A mixtape has always said more than a playlist link. The hand-picked tracks, the paper sleeve, the act of handing it over — all of it communicates care. Send Them A Song brings that feeling to the web: build a mixtape from YouTube songs, write a note, and share a URL that opens as an animated postcard with a cassette illustration, a center crease, and playback controls tucked inside the card itself.",
+          "No sign-up, no database (originally), no backend. The entire mixtape was encoded into the URL as compressed JSON — working entirely client-to-client. I wanted the shortest path from \"I want to send this\" to \"they've opened it.\"",
+        ],
+      },
+      {
+        heading: "Matters of craft",
+        paragraphs: [
+          "The card opens with a book-like animation — a cover page in portrait that flips to reveal a two-page landscape spread. The left page shows the greeting, message, and a cassette SVG I drew by hand. The right page lists the songs in a scrollable area. Below both, a player bar spans the full width with prev, play/pause, next, and play all.",
+          "Every element is designed to feel warm and human — cream paper tones, soft gradients, a script font for the greeting, and a light blue background that mimics a desk surface. The cursor-driven cover shadow is a small detail that makes the card feel physical.",
+          "The cassette SVG has a label on the bottom half that displays the mixtape title and a \"from → to\" inscription — the same personal touch you'd write on a real tape.",
+        ],
+      },
+      {
+        heading: "The encoding problem",
+        paragraphs: [
+          "URL length became the interesting constraint. The first version stored the entire mixtape as base64-encoded JSON in the URL. With 20 songs, that payload alone ran over 3,000 characters — too long for practical sharing. I solved it in two stages.",
+          "Stage one: compress each song's URL by storing only the YouTube video ID (11 chars instead of 45), and use single-character JSON keys. Stage two: store the payload server-side instead. When the user saves their mixtape, it POSTs to a Redis-backed API (Upstash), gets back an 8-character ID, and that's the entire URL. Old links still work — the receiver detects the format and fetches accordingly.",
+        ],
+      },
+      {
+        heading: "Player without a face",
+        paragraphs: [
+          "The receiver plays YouTube tracks with zero visual UI — the YouTube IFrame API player is a hidden 1×1 pixel element. No video, no suggestion sidebar, no branding. Just audio. The custom player bar with prev/next and auto-advance gives a controlled listening experience.",
+          "Spotify embeds and direct audio files are also supported, each with their own renderer inside the song list.",
+        ],
+      },
+      {
+        heading: "What I'd do differently",
+        paragraphs: [
+          "The builder page uses a debounced search that queries YouTube via a server-side scrape of ytInitialData. It works, but it's fragile — YouTube changes page structure often. If I rebuilt this, I'd use the YouTube Data API with a proper API key.",
+          "I'd also explore a simpler KV-free option: encode in a URL shortener's redirect (a link that 302s to the long URL), keeping the zero-infrastructure spirit while keeping URLs short.",
         ],
       },
     ],

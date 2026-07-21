@@ -19,6 +19,7 @@ import expressAcademyLogo from "@/public/express-academy.svg";
 import fastapiAcademyLogo from "@/public/fastapi-academy.svg";
 import learnAgenticAiLogo from "@/public/learn-agentic-ai.svg";
 import agentKitLogo from "@/public/agent-kit.svg";
+import sendThemASongLogo from "@/public/sendthemasong.svg";
 import type { SiteData } from "@/lib/types";
 
 export const siteData: SiteData = {
@@ -102,6 +103,13 @@ export const siteData: SiteData = {
       desc: "Karaoke maker — strips vocals from local songs or entire YouTube playlists with AI (Demucs) and outputs studio-quality instrumentals",
       imgUrl: emptyOrchestraLogo,
       caseStudy: "empty-orchestra",
+    },
+    {
+      title: "Send Them A Song",
+      link: "https://mixtape.erpradeepdahal.com.np",
+      desc: "A digital mixtape postcard — pick songs from YouTube, write a note, and share a link that opens as an animated card with playback controls",
+      imgUrl: sendThemASongLogo,
+      caseStudy: "send-them-a-song",
     },
     {
       title: "Express Academy",
