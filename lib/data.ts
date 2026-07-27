@@ -19,6 +19,7 @@ import expressAcademyLogo from "@/public/express-academy.svg";
 import fastapiAcademyLogo from "@/public/fastapi-academy.svg";
 import learnAgenticAiLogo from "@/public/learn-agentic-ai.svg";
 import agentKitLogo from "@/public/agent-kit.svg";
+import nestjsAcademyLogo from "@/public/nestjs-academy.svg";
 import sendThemASongLogo from "@/public/sendthemasong.svg";
 import type { SiteData } from "@/lib/types";
 
@@ -49,6 +50,7 @@ export const siteData: SiteData = {
     "Styled Components",
     "SASS/SCSS",
     "Express",
+    "NestJS",
     "Python",
     "FastAPI",
     "C",
@@ -131,6 +133,13 @@ export const siteData: SiteData = {
       desc: "An 8-day interactive course for building AI agents in Python — tool loops, MCP, RAG, and evals with a deterministic offline grader",
       imgUrl: learnAgenticAiLogo,
       caseStudy: "learn-agentic-ai",
+    },
+    {
+      title: "NestJS Academy",
+      link: "https://github.com/dhlpradip/learn-nestjs",
+      desc: "An 18-day interactive NestJS bootcamp with auto-graded exercises — decorators, modules, guards, TypeORM, JWT auth, and a WebSocket capstone",
+      imgUrl: nestjsAcademyLogo,
+      caseStudy: "nestjs-academy",
     },
     {
       title: "agent-kit",

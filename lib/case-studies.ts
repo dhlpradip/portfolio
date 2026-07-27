@@ -8,6 +8,7 @@ import neuralErrorsCard from "@/public/neural-errors.svg";
 import nepalElectionCard from "@/public/nepal-election.svg";
 import nepaliCnnCard from "@/public/nepali-cnn.svg";
 import sendThemASongLogo from "@/public/sendthemasong.svg";
+import nestjsAcademyLogo from "@/public/nestjs-academy.svg";
 
 export type CaseStudySection = {
   heading: string;
@@ -233,6 +234,68 @@ export const caseStudies: CaseStudy[] = [
         heading: "Outcome",
         paragraphs: [
           "18 days, 116 grader tests, all passing via a single npm run check quality gate. Together with Express Academy and Learn Agentic AI, it forms a self-graded curriculum that took me from React developer to working across the backend.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "nestjs-academy",
+    title: "NestJS Academy",
+    tagline:
+      "An 18-day interactive NestJS bootcamp — decorators, modules, providers, guards, pipes, interceptors, TypeORM, and JWT auth — every exercise auto-graded by a NestJS grader that is itself meta-proof the framework works.",
+    year: "2026",
+    stack: [
+      "NestJS",
+      "TypeScript",
+      "React",
+      "Vite",
+      "npm workspaces",
+      "tsc",
+      "reflect-metadata",
+      "Docker",
+    ],
+    repoUrl: "https://github.com/dhlpradip/learn-nestjs",
+    heroImage: nestjsAcademyLogo,
+    sections: [
+      {
+        heading: "The problem",
+        paragraphs: [
+          "After shipping Express Academy (Node) and FastAPI Academy (Python), the backend trilogy needed its third act: a course on the framework that thinks in decorators, modules, and dependency injection. NestJS enforces an opinionated architecture from the start — and that's exactly the muscle I wanted to build after years of unopinionated Express middleware.",
+          "The same philosophy carried over: write code, run real HTTP requests against it, see exactly what failed. But NestJS brought a new challenge — decorator metadata. The grader had to compile student code with emitDecoratorMetadata, which ruled out esbuild and forced a full tsc compile step for every submission.",
+        ],
+      },
+      {
+        heading: "Architecture",
+        paragraphs: [
+          "The platform is an npm-workspaces monorepo: a React/Vite course UI, a NestJS grading server, and a shared package of exercise specs. Writing the grader itself in NestJS was a deliberate choice — it means every deployment proves the framework works the way the lessons claim.",
+          "The critical architectural difference from Express Academy is the compilation pipeline. NestJS decorators (especially @Injectable, @Controller, and the DI system) need design-time metadata that tsc emits with emitDecoratorMetadata — something esbuild doesn't support. The grading pipeline spawns tsc.js as a child process with --experimentalDecorators --emitDecoratorMetadata --module commonjs, renames the output from .js to .cjs (the server is ESM), and then passes it to a CommonJS child runner via require().",
+        ],
+      },
+      {
+        heading: "The child runner sandbox",
+        paragraphs: [
+          "The child runner is a .cjs file that loads reflect-metadata first, runs require() on the compiled student module, then calls NestFactory.create() to boot the student's app. It listens on port 0 (OS-assigned, avoiding conflicts), fires declarative test specs with Node's built-in http module, and communicates results via a @@RESULTS@@ marker on stdout.",
+          "Tests support a declarative DSL: expected status codes, deep-subset JSON assertions, bodyContains string checks, and a save/interpolate mechanism that chains requests — a create-endpoint captures an ID and the next test uses it in a GET path. This chaining was essential for the TypeORM and JWT days where exercises build on earlier state.",
+        ],
+      },
+      {
+        heading: "Lessons across 4 arcs",
+        paragraphs: [
+          "Foundations (days 1-4) cover the NestJS CLI, modules, controllers, decorators, DTOs, and providers. Building APIs (days 5-8) adds CRUD, validation pipes, exception filters, guards, and interceptors. Data (days 9-12) tackles TypeORM with SQLite, relations and migrations, MongoDB via Mongoose, and environment configuration. Production (days 13-18) goes deeper: JWT auth with guards, CORS and rate limiting, file uploads with validation, caching with interceptors, background job queues, and a WebSocket capstone that builds a real-time chat module.",
+          "Each arc mirrors the same trajectory in Express and FastAPI academies, letting a student compare how the three frameworks handle the same problems — routing, validation, persistence, auth — side by side.",
+        ],
+      },
+      {
+        heading: "Meta: the grader proves the framework",
+        paragraphs: [
+          "The grading server is itself a NestJS application with @Controller, @Injectable services, and NestFactory.create in the child runner. This is the strongest possible advertisement for the course's material: every deploy of the grader runs the same patterns the lessons teach. The child-runner.cjs's require() + NestFactory.create cycle is exactly what a capstone deploy script would do.",
+          "The tsc compilation approach also solves a real problem: without emitDecoratorMetadata, NestJS can't resolve constructor-injected dependencies by type. The grader demonstrates exactly the kind of build-pipeline nuance you encounter when deploying real NestJS applications — and the course covers it in the Production arc.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "18 days, 54 grader tests across all reference solutions, validated by a single npm run check quality gate that compiles, boots, and closes every exercise's NestJS module. Together with Express Academy, FastAPI Academy, and Learn Agentic AI, it completes a self-graded backend-to-AI curriculum spanning Node, Python, and TypeScript.",
         ],
       },
     ],
