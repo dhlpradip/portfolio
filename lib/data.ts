@@ -21,6 +21,7 @@ import learnAgenticAiLogo from "@/public/learn-agentic-ai.svg";
 import agentKitLogo from "@/public/agent-kit.svg";
 import nestjsAcademyLogo from "@/public/nestjs-academy.svg";
 import sendThemASongLogo from "@/public/sendthemasong.svg";
+import preetyFlowerShopLogo from "@/public/preety-flower-shop.svg";
 import type { SiteData } from "@/lib/types";
 
 export const siteData: SiteData = {
@@ -112,6 +113,13 @@ export const siteData: SiteData = {
       desc: "A digital mixtape postcard — pick songs from YouTube, write a note, and share a link that opens as an animated card with playback controls",
       imgUrl: sendThemASongLogo,
       caseStudy: "send-them-a-song",
+    },
+    {
+      title: "Preety Flower Shop",
+      link: "https://preetyflowershop.com",
+      desc: "A full-stack flower shop with a customer storefront, WhatsApp-backed checkout, and an admin portal, all on AWS serverless infrastructure",
+      imgUrl: preetyFlowerShopLogo,
+      caseStudy: "preety-flower-shop",
     },
     {
       title: "Express Academy",

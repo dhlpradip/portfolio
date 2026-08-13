@@ -9,6 +9,7 @@ import nepalElectionCard from "@/public/nepal-election.svg";
 import nepaliCnnCard from "@/public/nepali-cnn.svg";
 import sendThemASongLogo from "@/public/sendthemasong.svg";
 import nestjsAcademyLogo from "@/public/nestjs-academy.svg";
+import preetyFlowerShopLogo from "@/public/preety-flower-shop.svg";
 
 export type CaseStudySection = {
   heading: string;
@@ -528,6 +529,72 @@ export const caseStudies: CaseStudy[] = [
         paragraphs: [
           "The builder page uses a debounced search that queries YouTube via a server-side scrape of ytInitialData. It works, but it's fragile, as YouTube changes page structure often. If I rebuilt this, I'd use the YouTube Data API with a proper API key.",
           "I'd also explore a simpler KV-free option: encode in a URL shortener's redirect (a link that 302s to the long URL), keeping the zero-infrastructure spirit while keeping URLs short.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "preety-flower-shop",
+    title: "Preety Flower Shop",
+    tagline:
+      "A full-stack flower shop for a Kathmandu-based business, with a customer storefront, a WhatsApp-backed checkout, and an admin portal running on AWS serverless infrastructure.",
+    year: "2026",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "shadcn/ui",
+      "AWS Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "S3 + CloudFront",
+      "Cognito",
+      "SST",
+    ],
+    repoUrl: "https://github.com/dhlpradip/preety-flower-shop",
+    liveUrl: "https://preetyflowershop.com",
+    heroImage: preetyFlowerShopLogo,
+    sections: [
+      {
+        heading: "The problem",
+        paragraphs: [
+          "Preety Flower Shop is a real flower business in Naxal, Kathmandu. Like most small Nepali shops, it took orders over the phone and on WhatsApp, which worked until it didn't: no catalog for customers to browse, prices quoted one at a time, and every order depended on remembering a conversation. The owner needed a storefront customers could browse on their own, plus a simple way to see and manage what came in.",
+          "There was one hard constraint from the start: no payment gateway. Online payment adoption for small businesses in Nepal is spotty, and the owner already trusted a Fonepay QR code and cash on delivery. So the checkout had to feel complete without ever touching money.",
+        ],
+      },
+      {
+        heading: "Architecture",
+        paragraphs: [
+          "The site is a pnpm workspace with three pieces: a Next.js app (apps/web) holding both the public storefront and the admin portal, a shared package (packages/core) with the DynamoDB repositories and Zod schemas, and a UI package of shadcn components. All infrastructure is declared with SST v3: an API Gateway REST API fronting Lambda handlers, a single-table DynamoDB, a private S3 bucket served only through CloudFront, and a Cognito user pool for the admin.",
+          "The API is deliberately thin. Each Lambda handler parses the request with a Zod schema before touching the database, resolves product prices server-side so the client can never inflate or undercut a total, and writes the order through a shared core repository. Routes are split between public ones (products, categories, orders) and admin ones (orders, products, categories, presigned image uploads), with the admin routes protected by a Cognito JWT authorizer that rejects unauthenticated requests before any handler code runs.",
+          "DynamoDB uses a single-table design with PK/SK prefixes (PRODUCT#, CATEGORY#, ORDER#) and two GSIs, one listing products by category and one grouping orders by status. All timestamps are stored in UTC and rendered in NPT (UTC+5:45) on the frontend, a small detail that matters when every order deadline is a same-day delivery.",
+        ],
+      },
+      {
+        heading: "Checkout without a payment gateway",
+        paragraphs: [
+          "The interesting constraint shaped the entire order flow. There is no payment step. When a customer checks out, the API creates the order with status PENDING_CONFIRMATION and returns the order id and total. The frontend then hands the customer two things: a WhatsApp deep link prefilled with their order details and the shop's Fonepay QR code, and a fallback cash-on-delivery option. The owner confirms the order in the admin portal, which flips the status and starts the fulfillment lifecycle.",
+          "Keeping money off the platform also kept the trust surface small. The shop never holds card data, never reconciles payments, and the only payout path is one the owner already uses daily. The order total is still computed and stored server-side, so the WhatsApp message and the admin view always agree on the price.",
+        ],
+      },
+      {
+        heading: "The admin portal",
+        paragraphs: [
+          "The admin side lives in the same Next.js app under route groups, with a login flow against the Cognito pool and a JWT passed to the API. It handles products, categories, and orders, with a status workflow that moves an order from PENDING_CONFIRMATION through CONFIRMED, PREPARING, READY, and DELIVERED (or CANCELLED).",
+          "Image uploads use presigned S3 URLs: the admin asks the API for a short-lived URL scoped to the uploads/ prefix, the browser PUTs the image directly to S3, and CloudFront serves it with a year-long cache TTL. The bucket stays fully private throughout, so the only public surface is the CDN.",
+        ],
+      },
+      {
+        heading: "Cost and ops from day one",
+        paragraphs: [
+          "The whole backend is designed around a small-business budget. Lambdas run on ARM64 (Graviton) with 256 MB and a 10-second timeout, every function gets a reserved concurrency of 10, and DynamoDB is on-demand billing. CloudWatch alarms and an AWS Budget are wired to an SNS topic that emails the owner: Lambda error rate, invocation spikes, API Gateway 5xx, DynamoDB throttling, and spend alerts at $10 and $25 a month. The escalation playbook is written down, starting with setting reserved concurrency to 0 as the kill switch.",
+          "SST makes the whole stack redeployable from a config file, and the security posture is documented as code: no public S3 access, least-privilege IAM per function, throttling and WAF on the API, short token expiry and MFA on the admin pool. For a project built for a real business, that boundary between 'it works' and 'it is safe and cheap to run' was the part worth doing properly.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "Preety Flower Shop got an online catalog, a checkout that fits how the owner already does business, and an admin portal that replaced the phone log. It is live at preetyflowershop.com with products, categories, and order management running on the AWS stack described here.",
         ],
       },
     ],
