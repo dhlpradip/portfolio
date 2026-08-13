@@ -537,7 +537,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "preety-flower-shop",
     title: "Preety Flower Shop",
     tagline:
-      "A full-stack flower shop for a Kathmandu-based business, with a customer storefront, a WhatsApp-backed checkout, and an admin portal running on AWS serverless infrastructure.",
+      "A full-stack flower shop built for a Kathmandu-based business, with a customer storefront, a WhatsApp-backed checkout, and an admin portal running on AWS serverless infrastructure. Deployed and functional, though the shop never adopted it as their day-to-day system.",
     year: "2026",
     stack: [
       "Next.js",
@@ -594,7 +594,8 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Outcome",
         paragraphs: [
-          "Preety Flower Shop got an online catalog, a checkout that fits how the owner already does business, and an admin portal that replaced the phone log. It is live at preetyflowershop.com with products, categories, and order management running on the AWS stack described here.",
+          "Being honest about where this landed: the site was built, deployed, and fully functional, but the shop never actually adopted it. Orders kept flowing through the owner's phone and WhatsApp as before, and the admin portal never became their daily workflow. So today the live site works but reads like a demo, stocked with sample products rather than the shop's real catalog.",
+          "That is the most instructive part of the project. Building for a real business exposed the gap between what a developer counts as done (everything works, every flow is tested) and what makes a small shop switch to new software (a daily habit they'd have to change, setup someone has to do, a reason the old way is actually painful). The product was not the failure. The adoption plan was the missing piece, and I would start there next time: define who maintains the catalog, seed it with real inventory, and hand the owner a reason to open the admin panel on day one.",
         ],
       },
     ],
