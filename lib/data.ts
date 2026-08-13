@@ -28,7 +28,7 @@ export const siteData: SiteData = {
   resumeUrl:
     "https://drive.google.com/file/d/1b47q-R6PimxYoVMabfrA01rDBK9JB4l-/view?usp=sharing",
   resumeFallback: "/resume.pdf",
-  careerStartYear: 2020,
+  careerStartYear: 2021,
   githubUsername: "dhlpradip",
   name: "Pradeep Dahal",
   avatarUrl: "/avatar.svg",
