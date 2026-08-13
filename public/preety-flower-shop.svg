@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#1a0f14"/>
+  <circle cx="540" cy="70" r="140" fill="#ff6fa5" opacity="0.12"/>
+  <circle cx="80" cy="350" r="120" fill="#9d6bff" opacity="0.10"/>
+  <g transform="translate(285, 70)">
+    <ellipse cx="30" cy="52" rx="30" ry="34" fill="#ff6fa5"/>
+    <ellipse cx="0" cy="34" rx="24" ry="30" fill="#ffb3d1"/>
+    <ellipse cx="58" cy="34" rx="24" ry="30" fill="#ff8fb8"/>
+    <ellipse cx="20" cy="18" rx="22" ry="26" fill="#ffd84d"/>
+    <ellipse cx="44" cy="18" rx="22" ry="26" fill="#ffa35c"/>
+    <circle cx="30" cy="30" r="9" fill="#f7e64b"/>
+    <rect x="24" y="82" width="10" height="38" fill="#5cc98a"/>
+    <path d="M 20 84 q -18 12 -14 30 q 8 -10 14 -14" fill="#5cc98a"/>
+    <path d="M 38 84 q 18 12 14 30 q -8 -10 -14 -14" fill="#4db876"/>
+  </g>
+  <text x="320" y="272" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#ff8fb8">Preety Flower Shop</text>
+  <text x="320" y="316" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#c9b8c9">Next.js + AWS serverless · flower storefront</text>
+</svg>
