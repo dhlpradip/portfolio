@@ -116,7 +116,7 @@ export const siteData: SiteData = {
     },
     {
       title: "Preety Flower Shop",
-      link: "https://preetyflowershop.com",
+      link: "https://prettyflowershop.com",
       desc: "A full-stack flower shop with a customer storefront, WhatsApp-backed checkout, and an admin portal, all on AWS serverless infrastructure",
       imgUrl: preetyFlowerShopLogo,
       caseStudy: "preety-flower-shop",

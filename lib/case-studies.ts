@@ -22,7 +22,7 @@ export type CaseStudy = {
   tagline: string;
   year: string;
   stack: string[];
-  repoUrl: string;
+  repoUrl?: string;
   liveUrl?: string;
   heroImage: StaticImageData;
   sections: CaseStudySection[];
@@ -551,8 +551,7 @@ export const caseStudies: CaseStudy[] = [
       "Cognito",
       "SST",
     ],
-    repoUrl: "https://github.com/dhlpradip/preety-flower-shop",
-    liveUrl: "https://preetyflowershop.com",
+    liveUrl: "https://prettyflowershop.com",
     heroImage: preetyFlowerShopLogo,
     sections: [
       {
