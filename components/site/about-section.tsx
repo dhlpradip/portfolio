@@ -33,10 +33,10 @@ export function AboutSection() {
           </div>
           <div className="flex flex-wrap gap-3 pt-4">
             <Button asChild variant="outline" className="rounded-full">
-              <Link href="/projects">See my work</Link>
+              <Link href="/projects">View selected work</Link>
             </Button>
             <Button asChild className="rounded-full">
-              <Link href="/about">Know me more</Link>
+              <Link href="/about">More about me</Link>
             </Button>
           </div>
         </div>

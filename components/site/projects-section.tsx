@@ -17,11 +17,7 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
   }`;
   const cardBody = (
     <>
-        <div
-          className={`relative w-full overflow-hidden bg-secondary/30 ${
-            featured ? "aspect-[16/10] lg:aspect-auto lg:flex-1 lg:min-h-[280px]" : "aspect-[16/11]"
-          }`}
-        >
+        <div className="relative w-full shrink-0 overflow-hidden bg-secondary/30 aspect-[16/10] border-b border-border/40">
           <Image
             src={project.imgUrl}
             alt={project.title}
@@ -34,7 +30,12 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
             }
           />
         </div>
-        <div className={`flex flex-col p-6 ${featured ? "lg:p-8" : ""}`}>
+        <div className="flex flex-col p-6 lg:p-8 flex-1">
+          {project.category && (
+            <span className="mb-2 font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              {project.category.replace("-", " ")}
+            </span>
+          )}
           <h3
             className={`font-display font-bold transition-colors group-hover:text-primary ${
               featured ? "text-2xl md:text-3xl" : "text-xl"
@@ -45,8 +46,18 @@ export function ProjectCard({ project, index, featured }: ProjectCardProps) {
           <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground md:text-base">
             {project.desc}
           </p>
+          {project.role && (
+            <p className="mt-2 font-body text-sm font-medium leading-relaxed text-foreground">
+              Role: {project.role}
+            </p>
+          )}
+          {project.stack && project.stack.length > 0 && (
+             <p className="mt-3 font-mono text-xs text-muted-foreground">
+               {project.stack.join(" · ")}
+             </p>
+          )}
           {(project.caseStudy || project.link) && (
-            <span className="mt-5 inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-widest text-primary opacity-0 transition-all group-hover:opacity-100">
+            <span className="mt-5 inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-widest text-primary transition-all group-hover:gap-3">
               {project.caseStudy ? "Read case study" : "Open project"}
               <span aria-hidden>→</span>
             </span>

@@ -6,13 +6,8 @@ import { HeroReveal } from "@/components/site/reveal";
 import { PageShell } from "@/components/site/page-shell";
 import { AmbientMesh } from "@/components/site/ambient-mesh";
 
-const roles = ["Frontend engineer", "Poet", "Bibliophile", "🇳🇵"];
-
 export function Hero() {
-  const [firstName, ...rest] = siteData.hero.name.split(" ");
-  const lastName = rest.join(" ");
-  const years = new Date().getFullYear() - siteData.careerStartYear;
-  const intro = siteData.hero.intro.replace("{years}", String(years));
+  const intro = siteData.hero.intro;
 
   return (
     <div className="hero-scene relative -mt-[4.5rem] min-h-[100svh] overflow-hidden pt-[4.5rem]">
@@ -21,57 +16,52 @@ export function Hero() {
 
       <PageShell wide className="relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-center py-20">
         <div className="max-w-4xl">
-          <HeroReveal delay={0}>
-            <p className="font-mono text-sm text-muted-foreground">
-              {siteData.hero.greeting}
-            </p>
+          <HeroReveal>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-sm font-semibold tracking-widest text-primary uppercase">
+                {siteData.hero.name}
+              </span>
+              <span className="h-1.5 w-1.5 rounded-full bg-primary/50"></span>
+              <span className="font-mono text-sm font-medium tracking-widest text-muted-foreground">
+                Kathmandu, Nepal
+              </span>
+            </div>
           </HeroReveal>
 
           <HeroReveal delay={0.06}>
-            <h1 className="mt-5 font-serif text-[clamp(3rem,10vw,6.5rem)] leading-[0.95] font-medium tracking-tight">
-              <span className="block">{firstName}</span>
-              <span className="text-gradient">{lastName}</span>
+            <h1 className="mt-6 max-w-4xl font-display text-4xl font-medium tracking-tight text-foreground md:text-5xl lg:text-[4rem] lg:leading-[1.1]">
+              I build fast, reliable product experiences with <span className="text-gradient">React, Next.js, TypeScript,</span> and <span className="text-gradient">applied AI.</span>
             </h1>
           </HeroReveal>
 
           <HeroReveal delay={0.14}>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {roles.map((role) => (
-                <span key={role} className="pill">
-                  {role}
-                </span>
-              ))}
-            </div>
-          </HeroReveal>
-
-          <HeroReveal delay={0.22}>
-            <p className="mt-10 max-w-xl font-serif text-lg leading-relaxed text-muted-foreground md:text-xl">
+            <p className="mt-8 max-w-2xl font-serif text-lg leading-relaxed text-muted-foreground md:text-xl">
               {intro}
-            </p>
-          </HeroReveal>
-
-          <HeroReveal delay={0.3}>
-            <p className="mt-6 max-w-lg border-l-2 border-primary/60 pl-5 font-serif text-xl italic leading-snug text-foreground md:text-2xl">
-              {siteData.hero.tagline}
             </p>
           </HeroReveal>
 
           <HeroReveal delay={0.38}>
             <div className="mt-12 flex flex-wrap items-center gap-5">
               <Button asChild size="lg" className="rounded-full px-8">
+                <Link href="#projects">
+                  View selected work
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="rounded-full px-8">
                 <Link
                   href={siteData.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  download
                 >
                   {siteData.hero.resumeCta}
                 </Link>
               </Button>
               <Link
-                href="#about"
-                className="group flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
+                href="#contact"
+                className="group flex items-center gap-2 font-mono text-sm font-medium tracking-widest text-muted-foreground transition-colors hover:text-primary"
               >
-                Explore
+                Contact me
                 <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
               </Link>
             </div>

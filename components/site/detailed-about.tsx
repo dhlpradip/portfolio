@@ -58,31 +58,21 @@ export function DetailedAbout() {
 
       <Reveal>
         <SectionHeading title={siteData.about.skillsHeading} />
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <div>
-            <h3 className="mb-5 font-body text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-              {siteData.about.techStackLabel}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {siteData.techStack.map((skill) => (
-                <Badge key={skill} variant="outline">
-                  {skill}
-                </Badge>
-              ))}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+          {siteData.capabilityGroups.map((group) => (
+            <div key={group.name}>
+              <h3 className="mb-5 font-body text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                {group.name}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <Badge key={skill} variant="outline">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <h3 className="mb-5 font-body text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-              {siteData.about.otherSkillsLabel}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {siteData.otherSkills.map((skill) => (
-                <Badge key={skill} variant="outline">
-                  {skill}
-                </Badge>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </Reveal>
 

@@ -46,13 +46,26 @@ export function ExperienceSection() {
                 <h3 className="font-display text-xl font-bold md:text-2xl">
                   {item.title}
                 </h3>
-                <p className="mt-1 font-display text-sm font-semibold uppercase tracking-wider text-primary">
-                  {item.company}
-                </p>
-                {item.desc && (
+                <div className="mt-1 flex flex-wrap items-center gap-2 font-display text-sm font-semibold uppercase tracking-wider text-primary">
+                  <span>{item.company}</span>
+                  {item.location && (
+                    <>
+                      <span className="text-muted-foreground">&middot;</span>
+                      <span className="text-muted-foreground">{item.location}</span>
+                    </>
+                  )}
+                </div>
+                {(item.desc || item.summary) && (
                   <p className="mt-3 max-w-2xl font-body text-sm leading-relaxed text-muted-foreground">
-                    {item.desc}
+                    {item.summary || item.desc}
                   </p>
+                )}
+                {item.bullets && item.bullets.length > 0 && (
+                  <ul className="mt-3 list-inside list-disc space-y-1 font-body text-sm text-muted-foreground">
+                    {item.bullets.map((bullet, idx) => (
+                      <li key={idx} className="leading-relaxed">{bullet}</li>
+                    ))}
+                  </ul>
                 )}
               </div>
               <p className="font-display text-sm font-bold tabular-nums text-muted-foreground md:text-right md:text-base">

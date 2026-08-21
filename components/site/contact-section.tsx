@@ -24,9 +24,15 @@ export function ContactSection() {
             <Button asChild size="lg" className="rounded-full px-10">
               <Link href="/contact">{siteData.contactCtaButton}</Link>
             </Button>
-            <p className="mt-4 font-body text-sm text-muted-foreground">
-              {siteData.email}
-            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-start gap-4 font-mono text-sm text-muted-foreground md:justify-end">
+              <a href={`mailto:${siteData.email}`} className="transition-colors hover:text-primary">Email</a>
+              <span>&middot;</span>
+              <a href={siteData.socials.find((s) => s.name === "LinkedIn")?.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">LinkedIn ↗</a>
+              <span>&middot;</span>
+              <a href={siteData.socials.find((s) => s.name === "GitHub")?.href} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">GitHub ↗</a>
+              <span>&middot;</span>
+              <a href={siteData.resumeUrl} download className="transition-colors hover:text-primary">Résumé ↓</a>
+            </div>
           </div>
         </div>
       </div>

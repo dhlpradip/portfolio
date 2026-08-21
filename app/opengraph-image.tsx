@@ -53,7 +53,7 @@ export default function OpengraphImage() {
             color: "#9aa7ba",
           }}
         >
-          Senior Frontend Developer · React · Next.js · TypeScript
+          Senior Frontend & Product Engineer · React · Next.js · TypeScript
         </div>
         <div
           style={{
@@ -67,7 +67,7 @@ export default function OpengraphImage() {
         >
           <span>erpradeepdahal.com.np</span>
           <span style={{ color: "#8fb8dd" }}>
-            Passion · Positivity · Poetry
+            Performance · AI Interfaces · Product Delivery
           </span>
         </div>
       </div>

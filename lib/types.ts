@@ -8,6 +8,11 @@ export type Project = {
   imgUrl: StaticImageData;
   /** Slug of an internal case study page under /projects/[slug] */
   caseStudy?: string;
+  category?: "client-work" | "product" | "engineering-lab" | "academic";
+  featured?: boolean;
+  impact?: string;
+  role?: string;
+  stack?: string[];
 };
 
 export type Experience = {
@@ -16,6 +21,9 @@ export type Experience = {
   logo: StaticImageData;
   year: string;
   companyLink?: string;
+  location?: string;
+  summary?: string;
+  bullets?: string[];
   desc?: string;
 };
 
@@ -47,8 +55,6 @@ export type AboutCopy = {
   multilingualLines: string[];
   closingParagraph: string;
   skillsHeading: string;
-  techStackLabel: string;
-  otherSkillsLabel: string;
   educationHeading: string;
 };
 
@@ -90,9 +96,13 @@ export type WritingsCopy = {
   previewBanner: string;
 };
 
+export type CapabilityGroup = {
+  name: string;
+  skills: string[];
+};
+
 export type SiteData = {
   resumeUrl: string;
-  resumeFallback: string;
   careerStartYear: number;
   githubUsername: string;
   name: string;
@@ -101,8 +111,7 @@ export type SiteData = {
   phone: string;
   phoneTel: string;
   address: string;
-  techStack: string[];
-  otherSkills: string[];
+  capabilityGroups: CapabilityGroup[];
   education: Education[];
   projects: Project[];
   experience: Experience[];

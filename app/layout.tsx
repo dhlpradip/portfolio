@@ -54,7 +54,7 @@ const personJsonLd = {
   name: siteData.name,
   url: siteData.siteMeta.domain,
   email: `mailto:${siteData.email}`,
-  jobTitle: "Senior Frontend Developer",
+  jobTitle: "Senior Frontend and Product Engineer",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Kathmandu",
@@ -64,7 +64,7 @@ const personJsonLd = {
     "@type": "CollegeOrUniversity",
     name: "Tribhuvan University, Institute of Engineering",
   },
-  knowsAbout: siteData.techStack,
+  knowsAbout: siteData.capabilityGroups.flatMap((group) => group.skills),
   sameAs: siteData.socials.map((social) => social.href),
 };
 
