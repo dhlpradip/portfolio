@@ -48,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
       "Playwright",
       "Vitest",
     ],
-    repoUrl: "https://github.com/dhlpradip/kaileko",
+    // repoUrl: "https://github.com/dhlpradip/kaileko",
     liveUrl: "https://kaileko.erpradeepdahal.com.np",
     heroImage: kailekoCard,
     sections: [
