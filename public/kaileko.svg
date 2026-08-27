@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#170b0d"/>
+      <stop offset="1" stop-color="#3a1116"/>
+    </linearGradient>
+    <linearGradient id="photo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ead9bd"/>
+      <stop offset="1" stop-color="#a68767"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#sky)"/>
+  <circle cx="528" cy="70" r="138" fill="#b91c2b" opacity="0.16"/>
+  <circle cx="92" cy="344" r="116" fill="#d9b780" opacity="0.08"/>
+
+  <g transform="translate(210 45) rotate(-2 110 95)">
+    <rect width="220" height="174" rx="8" fill="#f3e8d5"/>
+    <rect x="12" y="12" width="196" height="136" rx="3" fill="url(#photo)"/>
+    <circle cx="168" cy="43" r="18" fill="#f4dfae" opacity="0.82"/>
+    <path d="M12 127 L65 72 L100 105 L137 59 L208 127 V148 H12Z" fill="#554840"/>
+    <path d="M12 137 L79 92 L110 119 L154 81 L208 132 V148 H12Z" fill="#2d2928" opacity="0.82"/>
+    <path d="M105 105 L137 59 L154 81 L144 76 L136 86 L126 77Z" fill="#eee2cf" opacity="0.9"/>
+    <text x="110" y="166" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#6e5946">NEPAL · ARCHIVE</text>
+  </g>
+
+  <g transform="translate(160 244)">
+    <line x1="0" y1="0" x2="320" y2="0" stroke="#d9b780" stroke-width="3" opacity="0.65"/>
+    <circle cx="0" cy="0" r="6" fill="#d9b780"/>
+    <circle cx="320" cy="0" r="6" fill="#d9b780"/>
+    <circle cx="204" cy="0" r="11" fill="#b91c2b" stroke="#f4e7d1" stroke-width="4"/>
+    <text x="0" y="28" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#bfae9d">1900</text>
+    <text x="320" y="28" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#bfae9d">2000</text>
+    <text x="204" y="-18" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#f4e7d1">?</text>
+  </g>
+
+  <text x="320" y="329" text-anchor="middle" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#f4e7d1">Kaileko</text>
+  <text x="320" y="362" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#d9b780">How well do you know Nepal's past?</text>
+</svg>
