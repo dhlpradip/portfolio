@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import kailekoCard from "@/public/kaileko.svg";
 import emptyOrchestraLogo from "@/public/empty-orchestra.svg";
 import expressAcademyLogo from "@/public/express-academy.svg";
 import learnAgenticAiLogo from "@/public/learn-agentic-ai.svg";
@@ -29,6 +30,74 @@ export type CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "kaileko",
+    title: "Kaileko",
+    tagline:
+      "A visual history game that began as a frontend developer's deliberate step into production backend engineering.",
+    year: "2026",
+    stack: [
+      "React",
+      "TypeScript",
+      "Express",
+      "MongoDB Atlas",
+      "Cloudflare R2",
+      "GitHub Actions",
+      "Vercel",
+      "Render",
+      "Playwright",
+      "Vitest",
+    ],
+    repoUrl: "https://github.com/dhlpradip/kaileko",
+    liveUrl: "https://kaileko.erpradeepdahal.com.np",
+    heroImage: kailekoCard,
+    sections: [
+      {
+        heading: "Why I built it",
+        paragraphs: [
+          "Coming from a frontend background, I wanted meaningful hands-on backend experience—not another tutorial. I stepped beyond the frontend and discovered that the real engineering begins where the UI ends: data integrity, authorization, deployment, observability, and recovering safely when production behaves differently from development.",
+          "Kaileko (कहिलेको, meaning ‘from when?’) gave that learning a real product constraint. Players see a historical photograph from Nepal, guess when it was taken, and score points based on how close they are.",
+        ],
+      },
+      {
+        heading: "The product",
+        paragraphs: [
+          "Each game contains five rounds, with a daily challenge, scoring, player history and statistics, leaderboards, and authentication. The historical photos are in the public domain, with photographers attributed and credited.",
+          "Behind the player experience is an admin workflow for reviewing, publishing, and archiving photos. Curators can bulk-import CSV files or collect photos from URLs, but imports remain review-only: automation can prepare content without silently publishing it.",
+        ],
+      },
+      {
+        heading: "Architecture",
+        paragraphs: [
+          "Kaileko is a pnpm monorepo with a React and Vite client, a TypeScript and Express API, and shared contracts. MongoDB Atlas stores users, games, and photo metadata, while private Cloudflare R2 buckets hold the media itself.",
+          "The browser talks to the Vercel deployment through same-origin /api rewrites, which forward requests to the API on Render. Authorized media routes stream private R2 objects through the API rather than exposing storage credentials or relying on cross-origin signed redirects.",
+          "Authentication uses short-lived access tokens, rotating refresh tokens in secure cookies, CSRF protection, and role-based access control. Development, test, and production use separate databases and buckets so automated tests cannot mutate real or local working data.",
+        ],
+      },
+      {
+        heading: "Production engineering",
+        paragraphs: [
+          "The import pipeline is intentionally idempotent. Checksums and stable source identities prevent retries and restarted GitHub Actions jobs from duplicating media. URL collection is rate-limited, production runs are guarded, and dry runs validate manifests without writing anything.",
+          "Quality is layered across unit tests for scoring and domain rules, API integration tests, and Playwright end-to-end flows. Structured logs carry request IDs through failures while public error responses stay deliberately generic.",
+        ],
+      },
+      {
+        heading: "What production taught me",
+        paragraphs: [
+          "The most useful lessons came from failures that local happy paths missed. End-to-end cleanup once deleted development uploads, so test media moved into task-owned temporary directories. A signed R2 redirect returned 200, yet the browser could not consume its body cross-origin; proxying bytes through the API fixed the actual boundary instead of masking it.",
+          "Clean Render builds exposed workspace configuration and production dependency assumptions. Atlas enforced its own network boundary. Later, publication allowed a photo without historical context while the stored game snapshot still required it, causing production game creation to fail until both schemas expressed the same rule.",
+          "Each incident changed the design, not just the line that crashed: isolate environments, align validation across boundaries, keep imports repeatable, and log enough safe context to diagnose failures without leaking internals.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        paragraphs: [
+          "Kaileko is a deployed full-stack product with a production API, private media infrastructure, secure administration, automated content workflows, and a tested player experience.",
+          "More importantly, it changed how I think about product engineering. I still care deeply about the interface, but now I also ask what happens on retry, who is authorized, which system owns the truth, how data survives a failure, and whether production can explain what went wrong.",
+        ],
+      },
+    ],
+  },
   {
     slug: "empty-orchestra",
     title: "Empty Orchestra",

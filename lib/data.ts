@@ -1,3 +1,4 @@
+import kailekoCard from "@/public/kaileko.svg";
 import TechKunjaLogo from "@/public/tech-kunja.jpeg";
 import ClamphookLogo from "@/public/clamphook.png";
 import TraversunLogo from "@/public/traversun.png";
@@ -81,6 +82,7 @@ export const siteData: SiteData = {
         "Express",
         "Python",
         "FastAPI",
+        "MongoDB",
         "RAG",
         "LLM integration",
         "streaming agent interfaces",
@@ -96,7 +98,9 @@ export const siteData: SiteData = {
         "DynamoDB",
         "Cognito",
         "S3",
+        "Cloudflare R2",
         "CloudFront",
+        "CI/CD",
         "Git",
       ],
     },
@@ -125,6 +129,17 @@ export const siteData: SiteData = {
     },
   ],
   projects: [
+    {
+      title: "Kaileko",
+      link: "https://kaileko.erpradeepdahal.com.np",
+      desc: "A full-stack visual history game where players guess the year of public-domain photographs from Nepal, backed by secure curation and private media workflows",
+      imgUrl: kailekoCard,
+      caseStudy: "kaileko",
+      category: "product",
+      featured: true,
+      role: "Full-stack product and backend engineering",
+      stack: ["React", "TypeScript", "Express", "MongoDB", "Cloudflare R2"],
+    },
     {
       title: "Nepal Premier League",
       desc: "Built the player registration platform (with payments and admin flows) and the initial website for Nepal's national T20 cricket league",
